@@ -8,7 +8,7 @@ The website is developed from scratch, without using WordPress, to showcase PHP 
 - Home page with developer information (last name, first name, photo/logo, catchphrase).
 - List of all blog posts, sorted from newest to oldest.
 - Detailed view for each blog post, with title, content, date updated, and comment form.
-- Addition, modification and deletion of articles, reserved for registered and validated users.
+- Addition, modification and deletion of articles, reserved for the blogger.
 - User login and registration pages.
 - Enhanced security to avoid security vulnerabilities (XSS, CSRF, SQL Injection, etc.).
 - Integration of a full HTML/CSS code theme for a modern and responsive presentation.
