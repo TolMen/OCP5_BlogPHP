@@ -13,7 +13,7 @@
 <body>
     <div class="box">
         <span class="borderLine"></span>
-        <form method="POST" action="../UserControl/userRegist.php">
+        <form method="POST" action="../../control/UserControl/userRegist.php">
             <h2>Inscription</h2>
             <div class="inputBox">
                 <input type="text" name="pseudo" autocomplete="off" required="required">
