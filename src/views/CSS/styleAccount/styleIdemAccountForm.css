@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
-    margin:0;
-    padding:0;
-    box-sizing:
-    border-box;
-    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -32,7 +31,14 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#bafc00,#bafc00,#bafc00);
+    background: linear-gradient(
+        0deg,
+        transparent,
+        transparent,
+        #45f3ff,
+        #45f3ff,
+        #45f3ff
+    );
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -45,7 +51,14 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#bafc00,#bafc00,#bafc00);
+    background: linear-gradient(
+        0deg,
+        transparent,
+        transparent,
+        #45f3ff,
+        #45f3ff,
+        #45f3ff
+    );
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -65,7 +78,14 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#02F8A6,#02F8A6,#02F8A6);
+    background: linear-gradient(
+        0deg,
+        transparent,
+        transparent,
+        #ff2770,
+        #ff2770,
+        #ff2770
+    );
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -79,7 +99,14 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#02F8A6,#02F8A6,#02F8A6);
+    background: linear-gradient(
+        0deg,
+        transparent,
+        transparent,
+        #ff2770,
+        #ff2770,
+        #ff2770
+    );
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -146,7 +173,7 @@ body {
     transition: 0.5s;
 }
 
-.box form .inputBox input:valid ~ span, 
+.box form .inputBox input:valid ~ span,
 .box form .inputBox input:focus ~ span {
     color: #fff;
     font-size: 0.75em;
@@ -166,7 +193,7 @@ body {
     pointer-events: none;
 }
 
-.box form .inputBox input:valid ~ i, 
+.box form .inputBox input:valid ~ i,
 .box form .inputBox input:focus ~ i {
     height: 44px;
 }

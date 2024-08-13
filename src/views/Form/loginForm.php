@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/styleLoginForm.css">
+    <!-- Balise utile -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/logo.png" />
     <title>Connexion</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/styleAccount/styleIdemAccountForm.css">
+    <link rel="stylesheet" href="../CSS/styleAccount/styleLoginForm.css">
 </head>
 <body>
     <div class="box">
