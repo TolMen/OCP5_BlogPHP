@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../BDDControl/connectBDD.php';
+require_once '../BDDControl/connectBDD.php';
 include '../../model/log.php';
 
 if (isset($_POST['connexion'])) {
@@ -20,7 +20,7 @@ if (isset($_POST['connexion'])) {
                 $message = "ID : {$_SESSION['id']} = Connexion réussie pour l'utilisateur au pseudo '{$_SESSION['pseudo']}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
                 writeLog($message, "../../../LogFiles/login.log");
 
-                header('Location: ../../views/Page/home.php');
+                header('Location: ../../views/Page/homeConnect.php');
                 exit();
 
             }else{

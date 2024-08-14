@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once '../../BDDControl/connectBDD.php';
+require_once '../BDDControl/connectBDD.php';
 include '../../model/log.php';
 
 if(isset($_POST['envoi'])){
@@ -22,7 +22,7 @@ if(isset($_POST['envoi'])){
         $message = "ID : {$_SESSION['id']} = Inscription réussie pour l'utilisateur au pseudo '{$_SESSION['pseudo']}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
         writeLog($message, "../../../LogFiles/register.log");
 
-        header('Location: ../../views/Page/home.php');
+        header('Location: ../../views/Page/homeConnect.php');
 
     }else{
         header('Location: ../../views/Form/registForm.php');
