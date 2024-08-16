@@ -1,5 +1,7 @@
+/* Import */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
+/* CSS General */
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,10 @@ body {
     min-height: 100vh;
     background: #0e131f;
 }
+
+/* ---------------------------------------------------------------------- */
+
+/* Form box */
 
 .box {
     position: relative;
@@ -113,6 +119,8 @@ body {
     animation-delay: -4.5s;
 }
 
+/* Animation of the form box */
+
 @keyframes animate {
     0% {
         transform: rotate(0deg);
@@ -122,6 +130,10 @@ body {
         transform: rotate(360deg);
     }
 }
+
+/* ---------------------------------------------------------------------- */
+
+/* Form */
 
 .box form {
     position: absolute;
@@ -140,6 +152,8 @@ body {
     text-align: center;
     letter-spacing: 0.1em;
 }
+
+/* Input fields */
 
 .box form .inputBox {
     position: relative;
@@ -198,6 +212,8 @@ body {
     height: 44px;
 }
 
+/* Form link */
+
 .box form .links {
     display: flex;
     justify-content: end;
@@ -209,6 +225,8 @@ body {
     color: #fff;
     text-decoration: none;
 }
+
+/* Form button final */
 
 .box form input[type="submit"] {
     border: none;
@@ -226,6 +244,10 @@ body {
 .box form input[type="submit"]:active {
     opacity: 0.8;
 }
+
+/* ---------------------------------------------------------------------- */
+
+/* CSS Responsive */
 
 @media screen and (max-width: 500px) {
     .box,
@@ -245,3 +267,5 @@ body {
         width: 81%;
     }
 }
+
+/* ---------------------------------------------------------------------- */

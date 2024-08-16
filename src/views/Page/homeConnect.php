@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <!-- Balise utile -->
+        <!-- Useful tag -->
         <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/logo.png" />
         <title>HomeConnect</title>
         <meta
@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="../CSS/styleHome/homeConnectStyle.css" />
     </head>
     <body>
-        <!-- En-tête de page -->
+        <!-- Page header -->
         <header>
             <div class="boxLogo">
                 <img src="../../../assets/img/logo.png" alt="Logo" />
@@ -29,20 +29,22 @@
                 </ul>
             </nav>
         </header>
+        <!-- End of Page Header -->
 
-        <!-- Middle Page -->
+        <!-- Middle of the page -->
         <section>
             <h2>Jessy Frachisse</h2>
-            <p class="texte">
+            <p class="text">
                 Suivez mon parcours de formation et découvrez les projets
                 passionnants qui me mènent à la réussite chez OpenClassrooms.
             </p>
         </section>
+        <!-- End of Middle of Page -->
 
-        <!-- Pied de page -->
+        <!-- Footer -->
         <footer>
-            <div class="boite1">
-                <nav class="boite-reseaux">
+            <div class="boxFooter">
+                <nav class="boxNetwork">
                     <ul>
                         <li>
                             <a
@@ -65,14 +67,15 @@
                                 ></ion-icon
                             ></a>
                         </li>
-                        <!-- Rajouter li + a pour un autre réseau  -->
+                        <!-- Add li + a for another network -->
                     </ul>
                 </nav>
                 <p>©2024 Jessy.F | Tous les droits sont réservés</p>
             </div>
         </footer>
+        <!-- End of footer -->
 
-        <!-- Script pour les icônes -->
+        <!-- Script for icons -->
         <script
             type="module"
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

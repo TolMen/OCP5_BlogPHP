@@ -1,7 +1,7 @@
-/* CSS de base */
-
+/* Import */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
 
+/* CSS General */
 * {
     margin: 0;
     padding: 0;
@@ -33,22 +33,22 @@ body::after {
 
 /* ---------------------------------------------------------------------- */
 
-/* En-tête de page */
+/* Page header */
 
-header .top-page {
+header .topPage {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-header .top-page img {
+header .topPage img {
     padding: 35px 0;
     width: 75px;
     pointer-events: none;
 }
 
-header .top-page h2 {
+header .topPage h2 {
     font-size: 1.4em;
     font-family: "Press Start 2P", cursive;
     color: #eef1ef;
@@ -56,7 +56,7 @@ header .top-page h2 {
     text-shadow: 0px 0px 10px #eef1ef;
 }
 
-header .top-page .texte {
+header .topPage .text {
     padding: 0px 10%;
     padding-top: 50px;
     font-size: 1em;
@@ -67,9 +67,9 @@ header .top-page .texte {
 
 /* ---------------------------------------------------------------------- */
 
-/* Partie Choix */
+/* Middle of the page */
 
-.choix .boite {
+.choice .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,9 +77,9 @@ header .top-page .texte {
     padding-top: 35px;
 }
 
-/* Partie Choix // Carte Glass */
+/* Middle of the page // Carte Glass */
 
-.choix .boite .boite-carte {
+.choice .box .boxCard {
     position: relative;
     display: flex;
     justify-content: center;
@@ -90,7 +90,7 @@ header .top-page .texte {
     padding-top: 20px;
 }
 
-.choix .boite .boite-carte .carte {
+.choice .box .boxCard .card {
     position: relative;
     width: 250px;
     height: 100px;
@@ -107,7 +107,7 @@ header .top-page .texte {
     backdrop-filter: blur(5px);
 }
 
-.choix .boite .boite-carte .carte span {
+.choice .box .boxCard .card span {
     position: absolute;
     top: -7px;
     left: 7px;
@@ -118,7 +118,7 @@ header .top-page .texte {
     font-weight: bold;
 }
 
-.choix .boite .boite-carte .carte h2 {
+.choice .box .boxCard .card h2 {
     position: absolute;
     font-size: 1.5em;
     text-align: center;
@@ -128,39 +128,39 @@ header .top-page .texte {
     transition: 0.5s;
 }
 
-.choix .boite .boite-carte .carte:hover h2 {
+.choice .box .boxCard .card:hover h2 {
     color: #0e131f;
 }
 
 /* ---------------------------------------------------------------------- */
 
-/* Footer = Réseaux */
+/* Footer = Networks */
 
 footer {
     padding-top: 35px;
 }
 
-footer .boite1 {
+footer .boxFooter {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-footer .boite1 .boite-reseaux {
+footer .boxFooter .boxNetwork {
     padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer .boite1 .boite-reseaux ul {
+footer .boxFooter .boxNetwork ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer .boite1 .boite-reseaux li {
+footer .boxFooter .boxNetwork li {
     margin: 20px;
     height: 60px;
     width: 60px;
@@ -172,11 +172,11 @@ footer .boite1 .boite-reseaux li {
     box-shadow: 5px 5px 8px #070a10, -5px -5px 8px #151d2f;
 }
 
-footer .boite1 .boite-reseaux li:hover {
+footer .boxFooter .boxNetwork li:hover {
     box-shadow: inset 5px 5px 8px #070a10, inset -5px -5px 8px #151d2f;
 }
 
-footer .boite1 .boite-reseaux ul li a {
+footer .boxFooter .boxNetwork ul li a {
     font-size: 2em;
     display: flex;
     justify-content: center;
@@ -185,24 +185,24 @@ footer .boite1 .boite-reseaux ul li a {
     width: 125px;
 }
 
-footer .boite1 p {
+footer .boxFooter p {
     color: #eef1ef;
     text-align: center;
     padding-bottom: 20px;
     font-size: 0.9em;
 }
 
-/* Couleur des différents réseaux */
+/* Color of the different networks */
 
-footer .boite1 .boite-reseaux ul li:nth-child(1) a {
+footer .boxFooter .boxNetwork ul li:nth-child(1) a {
     color: #0e76a8;
 }
 
-footer .boite1 .boite-reseaux ul li:nth-child(2) a {
+footer .boxFooter .boxNetwork ul li:nth-child(2) a {
     color: #ffffff;
 }
 
-footer .boite1 .boite-reseaux ul li:nth-child(3) a {
+footer .boxFooter .boxNetwork ul li:nth-child(3) a {
     color: #14ff1c;
 }
 
@@ -210,49 +210,47 @@ footer .boite1 .boite-reseaux ul li:nth-child(3) a {
 
 /* CSS Responsive */
 
-/* Responsive Mobile vers Ordi */
-
 @media screen and (min-width: 900px) {
-    header .top-page img {
+    header .topPage img {
         width: 100px;
     }
 
-    header .top-page h2 {
+    header .topPage h2 {
         font-size: 2.5em;
     }
 
-    header .top-page .texte {
+    header .topPage .text {
         font-size: 2em;
     }
 
-    footer .boite1 .boite-reseaux li {
+    footer .boxFooter .boxNetwork li {
         margin: 25px;
         height: 75px;
         width: 75px;
     }
 
-    footer .boite1 p {
+    footer .boxFooter p {
         font-size: 1.3em;
     }
 }
 
 @media screen and (min-width: 600px) {
 
-    header .top-page h2 {
+    header .topPage h2 {
         font-size: 2em;
     }
 
-    header .top-page .texte {
+    header .topPage .text {
         font-size: 1.5em;
     }
 
-    footer .boite1 .boite-reseaux li {
+    footer .boxFooter .boxNetwork li {
         margin: 25px;
         height: 75px;
         width: 75px;
     }
 
-    footer .boite1 p {
+    footer .boxFooter p {
         font-size: 1.4em;
     }
 }

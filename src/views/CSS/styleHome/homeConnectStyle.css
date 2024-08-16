@@ -1,7 +1,7 @@
-/* Importation */
+/* Import */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
 
-/* CSS Général */
+/* CSS General */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ body {
 
 /* ---------------------------------------------------------------------- */
 
-/* En-tête de page */
+/* Page header */
 
 header {
     height: 75px;
@@ -72,7 +72,7 @@ header .navbar a:hover::before {
 
 /* ---------------------------------------------------------------------- */
 
-/* Middle Page */
+/* Middle of the page */
 
 section {
     display: flex;
@@ -90,7 +90,7 @@ section h2 {
     color: #eef1ef;
 }
 
-section .texte {
+section .text {
     padding: 0px 10%;
     font-size: 1em;
     font-weight: bold;
@@ -101,28 +101,28 @@ section .texte {
 
 /* ---------------------------------------------------------------------- */
 
-/* Footer = Réseaux */
+/* Footer = Networks */
 
-footer .boite1 {
+footer .boxFooter {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-footer .boite1 .boite-reseaux {
+footer .boxFooter .boxNetwork {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer .boite1 .boite-reseaux ul {
+footer .boxFooter .boxNetwork ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer .boite1 .boite-reseaux li {
+footer .boxFooter .boxNetwork li {
     margin: 20px;
     height: 60px;
     width: 60px;
@@ -134,11 +134,11 @@ footer .boite1 .boite-reseaux li {
     box-shadow: 5px 5px 8px #070a10, -5px -5px 8px #151d2f;
 }
 
-footer .boite1 .boite-reseaux li:hover {
+footer .boxFooter .boxNetwork li:hover {
     box-shadow: inset 5px 5px 8px #070a10, inset -5px -5px 8px #151d2f;
 }
 
-footer .boite1 .boite-reseaux ul li a {
+footer .boxFooter .boxNetwork ul li a {
     font-size: 2em;
     display: flex;
     justify-content: center;
@@ -147,23 +147,23 @@ footer .boite1 .boite-reseaux ul li a {
     width: 125px;
 }
 
-footer .boite1 p {
+footer .boxFooter p {
     text-align: center;
     font-size: 0.9em;
     color: #eef1ef;
 }
 
-/* Couleur des différents réseaux */
+/* Color of the different networks */
 
-footer .boite1 .boite-reseaux ul li:nth-child(1) a {
+footer .boxFooter .boxNetwork ul li:nth-child(1) a {
     color: #0e76a8;
 }
 
-footer .boite1 .boite-reseaux ul li:nth-child(2) a {
+footer .boxFooter .boxNetwork ul li:nth-child(2) a {
     color: #ffffff;
 }
 
-footer .boite1 .boite-reseaux ul li:nth-child(3) a {
+footer .boxFooter .boxNetwork ul li:nth-child(3) a {
     color: #14ff1c;
 }
 
@@ -177,17 +177,17 @@ footer .boite1 .boite-reseaux ul li:nth-child(3) a {
         font-size: 2.5em;
     }
 
-    section .texte {
+    section .text {
         font-size: 2em;
     }
 
-    footer .boite1 .boite-reseaux li {
+    footer .boxFooter .boxNetwork li {
         margin: 25px;
         height: 75px;
         width: 75px;
     }
 
-    footer .boite1 p {
+    footer .boxFooter p {
         font-size: 1.3em;
     }
 }
@@ -198,17 +198,17 @@ footer .boite1 .boite-reseaux ul li:nth-child(3) a {
         font-size: 2em;
     }
 
-    section .texte {
+    section .text {
         font-size: 1.5em;
     }
 
-    footer .boite1 .boite-reseaux li {
+    footer .boxFooter .boxNetwork li {
         margin: 25px;
         height: 75px;
         width: 75px;
     }
 
-    footer .boite1 p {
+    footer .boxFooter p {
         font-size: 1.4em;
     }
 }
