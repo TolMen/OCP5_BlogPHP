@@ -13,7 +13,7 @@
             content="Page d'accueil du site de blog du développeur Jessy Frachisse pour le projet 5 de OpenClassroom."
         />
         <!-- CSS -->
-        <link rel="stylesheet" href="homeStyle.css" />
+        <link rel="stylesheet" href="../CSS/homeStyle.css" />
     </head>
     <body>
         <!-- En-tête de page -->
@@ -46,7 +46,7 @@
                                 <h2>Contact</h2>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="../Form/loginForm.php">
                             <div class="carte">
                                 <span>03</span>
                                 <h2>Compte</h2>
