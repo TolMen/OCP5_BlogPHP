@@ -3,6 +3,7 @@
 require_once '../BDDControl/connectBDD.php';
 include '../../model/log.php';
 
+// User logout
 $_SESSION = array();
 session_destroy();
 
