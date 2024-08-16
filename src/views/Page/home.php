@@ -13,7 +13,7 @@
             content="Page d'accueil du site de blog du développeur Jessy Frachisse pour le projet 5 de OpenClassroom."
         />
         <!-- CSS -->
-        <link rel="stylesheet" href="../CSS/styleHome/homeStyle.css" />
+        <link rel="stylesheet" href="../CSS/styleHome/homeBaseStyle.css">
     </head>
     <body>
         <!-- Page header -->
