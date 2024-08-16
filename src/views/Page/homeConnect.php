@@ -7,55 +7,37 @@
         <meta name="mobile-web-app-capable" content="yes" />
         <!-- Useful tag -->
         <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/logo.png" />
-        <title>HomePage</title>
+        <title>HomeConnect</title>
         <meta
             name="description"
-            content="Page d'accueil du site de blog du développeur Jessy Frachisse pour le projet 5 de OpenClassroom."
+            content="Page d'accueil pour les utilisateurs connecté du site de blog du développeur Jessy Frachisse pour le projet 5 de OpenClassroom."
         />
         <!-- CSS -->
-        <link rel="stylesheet" href="../CSS/styleHome/homeBaseStyle.css">
+        <link rel="stylesheet" href="../CSS/styleHome/homeConnectStyle.css" />
     </head>
     <body>
         <!-- Page header -->
         <header>
-            <div class="topPage">
-                <img src="../../../assets/img/logo.png" alt="Logo site" />
-                <h2>Jessy Frachisse</h2>
-                <p class="text">
-                    Suivez mon parcours de formation et découvrez les projets
-                    passionnants qui me mènent à la réussite chez
-                    OpenClassrooms.
-                </p>
+            <div class="boxLogo">
+                <img src="../../../assets/img/logo.png" alt="Logo" />
             </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Soon</a></li>
+                    <li><a href="../../control/UserControl/userStop.php">Déconnexion</a></li>
+                </ul>
+            </nav>
         </header>
         <!-- End of Page Header -->
 
         <!-- Middle of the page -->
-        <section class="choice">
-            <div class="box">
-                <div class="projectGrid">
-                    <div class="boxCard">
-                        <a href="#">
-                            <div class="card">
-                                <span>01</span>
-                                <h2>Articles</h2>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="card">
-                                <span>02</span>
-                                <h2>Contact</h2>
-                            </div>
-                        </a>
-                        <a href="../Form/loginForm.php">
-                            <div class="card">
-                                <span>03</span>
-                                <h2>Compte</h2>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <section>
+            <h2>Jessy Frachisse</h2>
+            <p class="text">
+                Suivez mon parcours de formation et découvrez les projets
+                passionnants qui me mènent à la réussite chez OpenClassrooms.
+            </p>
         </section>
         <!-- End of Middle of Page -->
 
@@ -77,13 +59,15 @@
                             ></a>
                         </li>
                         <li>
-                            <a href="../../../assets/DLs/CV_Jessy.pdf" download="CV_Jessy.pdf"
+                            <a
+                                href="../../../assets/DLs/CV_Jessy.pdf"
+                                download="CV_Jessy.pdf"
                                 ><ion-icon
                                     name="arrow-down-circle-outline"
                                 ></ion-icon
                             ></a>
                         </li>
-                        <!-- Add li + a for another network  -->
+                        <!-- Add li + a for another network -->
                     </ul>
                 </nav>
                 <p>©2024 Jessy.F | Tous les droits sont réservés</p>
