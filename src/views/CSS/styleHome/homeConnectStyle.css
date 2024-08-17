@@ -74,15 +74,15 @@ header .navbar a:hover::before {
 
 /* Middle of the page */
 
-section {
+.infoPage {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 25px 0;
 }
 
-section h2 {
+.infoPage .title {
     font-size: 1.4em;
     font-family: "Press Start 2P", cursive;
     padding-bottom: 25px;
@@ -90,7 +90,7 @@ section h2 {
     color: #eef1ef;
 }
 
-section .text {
+.infoPage .text {
     padding: 0px 10%;
     font-size: 1em;
     font-weight: bold;
@@ -173,11 +173,11 @@ footer .boxFooter .boxNetwork ul li:nth-child(3) a {
 
 @media screen and (min-width: 900px) {
 
-    section h2 {
+    .infoPage .title {
         font-size: 2.5em;
     }
 
-    section .text {
+    .infoPage .text {
         font-size: 2em;
     }
 
@@ -194,11 +194,11 @@ footer .boxFooter .boxNetwork ul li:nth-child(3) a {
 
 @media screen and (min-width: 600px) {
 
-    section h2 {
+    .infoPage .title {
         font-size: 2em;
     }
 
-    section .text {
+    .infoPage .text {
         font-size: 1.5em;
     }
 

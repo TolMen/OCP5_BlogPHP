@@ -9,10 +9,10 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: "Poppins", sans-serif;
 }
 
 p {
-    font-family: "Poppins", sans-serif;
     color: #eef1ef;
 }
 
@@ -70,17 +70,17 @@ header .topPage .text {
 
 /* Middle of the page */
 
-.choice .box {
+.choice .boxChoise {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 35px;
+    padding: 25px 0;
 }
 
 /* Middle of the page // Carte Glass */
 
-.choice .box .boxCard {
+.choice .boxChoise .boxCard {
     position: relative;
     display: flex;
     justify-content: center;
@@ -88,10 +88,9 @@ header .topPage .text {
     max-width: 1200px;
     flex-wrap: wrap;
     z-index: 1;
-    padding-top: 20px;
 }
 
-.choice .box .boxCard .card {
+.choice .boxChoise .boxCard .card {
     position: relative;
     width: 250px;
     height: 100px;
@@ -108,7 +107,7 @@ header .topPage .text {
     backdrop-filter: blur(5px);
 }
 
-.choice .box .boxCard .card span {
+.choice .boxChoise .boxCard .card span {
     position: absolute;
     top: -7px;
     left: 7px;
@@ -119,7 +118,7 @@ header .topPage .text {
     font-weight: bold;
 }
 
-.choice .box .boxCard .card h2 {
+.choice .boxChoise .boxCard .card h2 {
     position: absolute;
     font-size: 1.5em;
     text-align: center;
@@ -129,31 +128,13 @@ header .topPage .text {
     transition: 0.5s;
 }
 
-.choice .box .boxCard .card:hover h2 {
+.choice .boxChoise .boxCard .card:hover h2 {
     color: #0e131f;
 }
 
 /* ---------------------------------------------------------------------- */
 
 /* Footer = Networks */
-
-footer {
-    padding-top: 35px;
-}
-
-footer .boxFooter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-footer .boxFooter .boxNetwork {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 footer .boxFooter .boxNetwork ul {
     display: flex;

@@ -32,8 +32,8 @@
         <!-- End of Page Header -->
 
         <!-- Middle of the page -->
-        <section>
-            <h2>Jessy Frachisse</h2>
+        <section class="infoPage">
+            <h2 class="title">Jessy Frachisse</h2>
             <p class="text">
                 Suivez mon parcours de formation et découvrez les projets
                 passionnants qui me mènent à la réussite chez OpenClassrooms.

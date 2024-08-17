@@ -1,7 +1,9 @@
 <?php
 
+session_start();
+
 require_once '../BDDControl/connectBDD.php';
-include '../../model/log.php';
+require_once '../../model/log.php';
 
 // User logout
 $_SESSION = array();

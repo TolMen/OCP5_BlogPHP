@@ -1,11 +1,12 @@
 <?php
+
 session_start();
 
 require_once '../BDDControl/connectBDD.php';
-include '../../model/log.php';
+require_once '../../model/log.php';
 
 // Checks if the registration form has been submitted
-if(isset($_POST['envoi'])){
+if(isset($_POST['inscription'])){
     // Check if the username and password fields are not empty
     if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
         // Secure the nickname and hash the password
@@ -23,6 +24,7 @@ if(isset($_POST['envoi'])){
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['mdp'] = $mdp;
             $_SESSION['id'] = $recupUser->fetch()['id'];
+            $_SESSION['logged_in'] = true;
         }
 
         $message = "ID : {$_SESSION['id']} = Inscription réussie pour l'utilisateur au pseudo '{$_SESSION['pseudo']}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;

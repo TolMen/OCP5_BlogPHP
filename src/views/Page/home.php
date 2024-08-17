@@ -14,6 +14,7 @@
         />
         <!-- CSS -->
         <link rel="stylesheet" href="../CSS/styleHome/homeBaseStyle.css">
+        <link rel="stylesheet" href="../CSS/styleHome/formStyle.css">
     </head>
     <body>
         <!-- Page header -->
@@ -24,15 +25,14 @@
                 <p class="text">
                     Suivez mon parcours de formation et découvrez les projets
                     passionnants qui me mènent à la réussite chez
-                    OpenClassrooms.
-                </p>
+                    OpenClassrooms.</p>
             </div>
         </header>
         <!-- End of Page Header -->
 
         <!-- Middle of the page -->
         <section class="choice">
-            <div class="box">
+            <div class="boxChoise">
                 <div class="projectGrid">
                     <div class="boxCard">
                         <a href="#">
@@ -58,6 +58,86 @@
             </div>
         </section>
         <!-- End of Middle of Page -->
+
+        <!-- Form box -->
+        <section class="formContact">
+            <div class="box">
+                <span class="borderLine"></span>
+                <!-- Form -->
+                <form
+                    method="POST"
+                    action="../../control/contactControl.php"
+                >
+                    <h2 class="titleForm">Contact</h2>
+                    <!-- Input fields -->
+                    <div class="inputBox">
+                        <input
+                            type="text"
+                            name="firstName"
+                            pattern="[A-Za-zÀ-ÿ\s\-]+"
+                            maxlength="26"
+                            title="Veuillez entrer uniquement des lettres"
+                            autocomplete="off"
+                            required
+                        />
+                        <span>Prénom</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input
+                            type="text"
+                            name="name"
+                            pattern="[A-Za-zÀ-ÿ\s\-]+"
+                            maxlength="30"
+                            title="Veuillez entrer uniquement des lettres"
+                            autocomplete="off"
+                            required
+                        />
+                        <span>Nom</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input
+                            type="email"
+                            name="email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            maxlength="100"
+                            title="Veuillez entrer une adresse mail valide, par exemple nom@example.com"
+                            autocomplete="off"
+                            required
+                        />
+                        <span>Adresse E-Mail</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input
+                            type="text"
+                            name="message"
+                            maxlength="1000"
+                            autocomplete="off"
+                            required
+                        />
+                        <span>Message</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input
+                            type="checkbox"
+                            name="check"
+                            id="check"
+                            required
+                        />
+                        <label for="check"
+                            >J'autorise la collecte de mes informations.</label
+                        >
+                    </div>
+                    <!-- End of Input fields -->
+                    <input type="submit" name="envoi" value="Envoyer" />
+                </form>
+                <!-- End of Form -->
+            </div>
+            <!-- End of Form box -->
+        </section>
 
         <!-- Footer -->
         <footer>
