@@ -32,7 +32,7 @@ if (isset($_POST['connexion'])) {
                 exit();
 
             }else{
-                header('Location: ../Form/loginForm.php');
+                header('Location: ../../views/Page/home.php');
                 exit();
             }
         }
