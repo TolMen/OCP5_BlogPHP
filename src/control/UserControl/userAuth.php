@@ -1,7 +1,9 @@
 <?php
 
+session_start();
+
 require_once '../BDDControl/connectBDD.php';
-include '../../model/log.php';
+require_once '../../model/log.php';
 
 // Checks if the form has been submitted
 if (isset($_POST['connexion'])) {
@@ -24,6 +26,7 @@ if (isset($_POST['connexion'])) {
                 // Connection successful: initializes session variables
                 $_SESSION['pseudo'] = $pseudo;
                 $_SESSION['id'] = $userData['id'];
+                $_SESSION['logged_in'] = true;
         
                 $message = "ID : {$_SESSION['id']} = Connexion réussie pour l'utilisateur au pseudo '{$_SESSION['pseudo']}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
                 writeLog($message, "../../../LogFiles/login.log");

@@ -19,12 +19,12 @@
             <h2>Connexion</h2>
             <!-- Input fields -->
             <div class="inputBox">
-                <input type="text" name="pseudo" autocomplete="off" required="required">
+                <input type="text" name="pseudo" autocomplete="off" required>
                 <span>Pseudo</span>
                 <i></i>
             </div>
             <div class="inputBox">
-                <input type="password" name="mdp" autocomplete="off" required="required">
+                <input type="password" name="mdp" autocomplete="off" required>
                 <span>Mot de passe</span>
                 <i></i>
             </div>

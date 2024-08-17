@@ -14,7 +14,6 @@
         />
         <!-- CSS -->
         <link rel="stylesheet" href="../CSS/styleHome/homeConnectStyle.css" />
-        <link rel="stylesheet" href="../CSS/styleHome/formStyle.css">
     </head>
     <body>
         <!-- Page header -->
@@ -41,75 +40,6 @@
             </p>
         </section>
         <!-- End of Middle of Page -->
-
-        <!-- Form box -->
-        <section class="formContact">
-            <div class="box">
-                <span class="borderLine"></span>
-                <!-- Form -->
-                <form
-                    method="POST"
-                    action=""
-                >
-                    <h2 class="titleForm">Contact</h2>
-                    <!-- Input fields -->
-                    <div class="inputBox">
-                        <input
-                            type="text"
-                            name="firstName"
-                            autocomplete="off"
-                            required="required"
-                        />
-                        <span>Prénom</span>
-                        <i></i>
-                    </div>
-                    <div class="inputBox">
-                        <input
-                            type="text"
-                            name="name"
-                            autocomplete="off"
-                            required="required"
-                        />
-                        <span>Nom</span>
-                        <i></i>
-                    </div>
-                    <div class="inputBox">
-                        <input
-                            type="mail"
-                            name="email"
-                            autocomplete="off"
-                            required="required"
-                        />
-                        <span>Adresse E-Mail</span>
-                        <i></i>
-                    </div>
-                    <div class="inputBox">
-                        <input
-                            type="text"
-                            name="message"
-                            autocomplete="off"
-                            required="required"
-                        />
-                        <span>Message</span>
-                        <i></i>
-                    </div>
-                    <div class="inputBox">
-                        <input
-                            type="checkbox"
-                            name="check"
-                            required="required"
-                        />
-                        <label for="check"
-                            >J'autorise la collecte de mes informations.</label
-                        >
-                    </div>
-                    <!-- End of Input fields -->
-                    <input type="submit" name="envoi" value="Envoyer" />
-                </form>
-                <!-- End of Form -->
-            </div>
-            <!-- End of Form box -->
-        </section>
 
         <!-- Footer -->
         <footer>

@@ -25,8 +25,7 @@
                 <p class="text">
                     Suivez mon parcours de formation et découvrez les projets
                     passionnants qui me mènent à la réussite chez
-                    OpenClassrooms.
-                </p>
+                    OpenClassrooms.</p>
             </div>
         </header>
         <!-- End of Page Header -->
@@ -67,7 +66,7 @@
                 <!-- Form -->
                 <form
                     method="POST"
-                    action=""
+                    action="../../control/contactControl.php"
                 >
                     <h2 class="titleForm">Contact</h2>
                     <!-- Input fields -->
@@ -75,8 +74,11 @@
                         <input
                             type="text"
                             name="firstName"
+                            pattern="[A-Za-zÀ-ÿ\s\-]+"
+                            maxlength="26"
+                            title="Veuillez entrer uniquement des lettres"
                             autocomplete="off"
-                            required="required"
+                            required
                         />
                         <span>Prénom</span>
                         <i></i>
@@ -85,18 +87,24 @@
                         <input
                             type="text"
                             name="name"
+                            pattern="[A-Za-zÀ-ÿ\s\-]+"
+                            maxlength="30"
+                            title="Veuillez entrer uniquement des lettres"
                             autocomplete="off"
-                            required="required"
+                            required
                         />
                         <span>Nom</span>
                         <i></i>
                     </div>
                     <div class="inputBox">
                         <input
-                            type="mail"
+                            type="email"
                             name="email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            maxlength="100"
+                            title="Veuillez entrer une adresse mail valide, par exemple nom@example.com"
                             autocomplete="off"
-                            required="required"
+                            required
                         />
                         <span>Adresse E-Mail</span>
                         <i></i>
@@ -105,8 +113,9 @@
                         <input
                             type="text"
                             name="message"
+                            maxlength="1000"
                             autocomplete="off"
-                            required="required"
+                            required
                         />
                         <span>Message</span>
                         <i></i>
@@ -115,7 +124,8 @@
                         <input
                             type="checkbox"
                             name="check"
-                            required="required"
+                            id="check"
+                            required
                         />
                         <label for="check"
                             >J'autorise la collecte de mes informations.</label

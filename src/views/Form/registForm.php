@@ -19,12 +19,12 @@
             <h2>Inscription</h2>
             <!-- Input fields -->
             <div class="inputBox">
-                <input type="text" name="pseudo" autocomplete="off" required="required">
+                <input type="text" name="pseudo" autocomplete="off" required>
                 <span>Pseudo</span>
                 <i></i>
             </div>
             <div class="inputBox">
-                <input type="password" name="mdp" autocomplete="off" required="required">
+                <input type="password" name="mdp" autocomplete="off" required>
                 <span>Mot de passe</span>
                 <i></i>
             </div>
@@ -33,7 +33,7 @@
                 <a href="../Page/home.php">Accueil</a>
                 <a href="loginForm.php">Connexion</a>
             </div>
-            <input type="submit" name="envoi" value="S'inscrire">
+            <input type="submit" name="inscription" value="S'inscrire">
         </form>
         <!-- End of Form -->
     </div>

@@ -5,7 +5,7 @@ $dbname = 'ocprojet5';
 $admin = 'root';
 $pass = '';
 
-include 'src/model/log.php';
+require_once dirname(__DIR__, 2) . '/model/log.php';
 
 try {
     // Connecting to database using PDO
