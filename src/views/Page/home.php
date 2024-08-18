@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="mobile-web-app-capable" content="yes" />
         <!-- Useful tag -->
-        <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/logo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../public/favicon-16x16.png" />
         <title>HomePage</title>
         <meta
             name="description"
