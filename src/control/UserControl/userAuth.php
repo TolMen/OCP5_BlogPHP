@@ -1,40 +1,76 @@
 <?php
 
+/* 
+- Reprend une session existante
+- Resumes an existing session
+*/
 session_start();
 
-require_once '../BDDControl/connectBDD.php';
-require_once '../../model/log.php';
+/* 
+- Inclusion des fichiers nécessaire
+- Inclusion of necessary files
+*/
+require_once '../../model/UserModel/userAuthModel.php';
+require_once '../../model/LogModel/logWriteModel.php';
 
-// Checks if the form has been submitted
+/*
+- Vérifie si le formulaire est soumis, puis si les champs sont vide
+- Check if the form is submitted, and if the fields are empty
+*/
 if (isset($_POST['connexion'])) {
-    // Checks if the username and password fields are not empty
     if (!empty($_POST['pseudo']) && !empty($_POST['mdp'])) {
-        // Secures user input
+
+        /*
+        - Sécurisation et récupération des données
+        - Security and data retrieval
+        */
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $mdp = $_POST['mdp'];
 
-        // Prepares and executes query to retrieve user information
-        $recupUser = $bdd->prepare('SELECT * FROM users WHERE pseudo = ?');
-        $recupUser->execute(array($pseudo));
+        /*
+        - Nouvelle instance du modèle de la classe
+        - New instance of the class model
+        */
+        $userAuthModel = new UserAuthModel();
 
-        // Check if user exists
-        if ($recupUser->rowCount() > 0) {
-            // Retrieves user data
-            $userData = $recupUser->fetch();
-            // Check password
-            if (password_verify($mdp, $userData['mdp'])) {
-                // Connection successful: initializes session variables
+        /*
+        - Récupère le pseudo fourni
+        - Retrieves the provided pseudo
+        */
+        $dataAuthUser = $userAuthModel->getAuthUser($pseudo);
+
+        /*
+        - Vérifie la présence du pseudo, puis si le MDP correspond au MDP haché dans la BDD
+        - Check if the pseudo exists, and if the password matches the hashed password in the database
+        */
+        if ($dataAuthUser) {
+            if (password_verify($mdp, $dataAuthUser['mdp'])) {
+
+                /*
+                - Stock les informations dans des variables de session
+                - Store the information in session variables
+                */
                 $_SESSION['pseudo'] = $pseudo;
-                $_SESSION['id'] = $userData['id'];
-                $_SESSION['logged_in'] = true;
-        
+                $_SESSION['id'] = $dataAuthUser['id'];
+
+                /*
+                - Gestion des logs par un message et un appel de fonction
+                - Logs management by a message and a function call
+                */
                 $message = "ID : {$_SESSION['id']} = Connexion réussie pour l'utilisateur au pseudo '{$_SESSION['pseudo']}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
                 writeLog($message, "../../../LogFiles/login.log");
 
+                /*
+                - Redirection vers la page d'accueil des utilisateurs
+                - Redirect to the user's home page
+                */
                 header('Location: ../../views/Page/homeConnect.php');
                 exit();
-
-            }else{
+            } else {
+                /*
+                - Si échecs, retourne au formulaire
+                - If failures, return to the form
+                */
                 header('Location: ../../views/Page/home.php');
                 exit();
             }
