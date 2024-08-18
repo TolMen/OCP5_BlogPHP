@@ -41,15 +41,9 @@
                                 <h2>Articles</h2>
                             </div>
                         </a>
-                        <a href="#">
-                            <div class="card">
-                                <span>02</span>
-                                <h2>Contact</h2>
-                            </div>
-                        </a>
                         <a href="../Form/loginForm.php">
                             <div class="card">
-                                <span>03</span>
+                                <span>02</span>
                                 <h2>Compte</h2>
                             </div>
                         </a>
