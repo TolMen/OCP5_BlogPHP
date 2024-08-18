@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Useful tag -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../public/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/logo.png" />
     <title>Inscription</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/styleAccount/styleIdemAccountForm.css">
