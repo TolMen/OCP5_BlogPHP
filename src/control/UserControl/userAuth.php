@@ -7,13 +7,11 @@
 session_start();
 
 /* 
-- Inclusion des fichiers nécessaire :
-Modèle gestion utilisateur + logs 
-- Inclusion of necessary files:
-User management + logs model
+- Inclusion des fichiers nécessaire
+- Inclusion of necessary files
 */
 require_once '../../model/UserModel/userAuthModel.php';
-require_once '../../model/log.php';
+require_once '../../model/LogModel/logWriteModel.php';
 
 /*
 - Vérifie si le formulaire est soumis, puis si les champs sont vide

@@ -66,7 +66,7 @@
                 <!-- Form -->
                 <form
                     method="POST"
-                    action="../../control/contactControl.php"
+                    action="../../control/ContactControl/contactControl.php"
                 >
                     <h2 class="titleForm">Contact</h2>
                     <!-- Input fields -->

@@ -7,13 +7,11 @@
 session_start();
 
 /* 
-- Inclusion des fichiers nécessaire :
-Modèle gestion utilisateur + logs 
-- Inclusion of necessary files:
-User management + logs model
+- Inclusion des fichiers nécessaire
+- Inclusion of necessary files
 */
 require_once '../BDDControl/connectBDD.php';
-require_once '../../model/log.php';
+require_once '../../model/LogModel/logWriteModel.php';
 
 /*
 - Réinitialise les variables, puis détruit la session

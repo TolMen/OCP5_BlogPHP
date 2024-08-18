@@ -1,12 +1,10 @@
 <?php
 
 /*
-- Inclusion de fichier nécessaire :
-Connexion à la BDD
-- Necessary file inclusion :
-Connection to the database
+- Inclusion de fichier nécessaire
+- Necessary file inclusion
 */
-require_once '../BDDControl/connectBDD.php'; 
+require_once '../../control/BDDControl/connectBDD.php'; 
 
 /*
 - Classe pour gérer les opérations de connexion
