@@ -7,6 +7,7 @@
 require_once '../../model/ContactModel/contactFormModel.php';
 require_once '../../model/ContactModel/contentContactModelGenerator.php.php';
 require_once '../../model/LogModel/logWriteModel.php';
+require_once '../../model/ContactModel/contactSecurityModel.php';
 
 /*
 - Vérifie si le formulaire est soumis, puis si les champs sont complets
@@ -25,36 +26,54 @@ if (isset($_POST['envoi'])) {
         $message = htmlspecialchars($_POST['message']);
 
         /*
-        - Nouvelle instance du modèle de la classe
-        - New instance of the class model
+        - Nouvelle instance de la classe de sécurité
+        - New instance of the security class
         */
-        $contactModel = new ContactModel();
+        $securityContact = new SecurityFormContact();
 
         /*
-        - Appel la fonction pour insérer les données dans la BDD
-        - Call the function to insert data into the database
+        - Appel de la fonction de vérification
+        - Call of the verification function
         */
-        if ($contactModel->insertContact($firstName, $name, $email, $message)) {
+        $errorsSecurContact = $securityContact->checkSecurityContact($firstName, $name, $email, $message);
 
-            /*
-            - Appel la fonction pour générer l'organisation des données dans un modèle
-            - Call the function to generate the organization of data in a model
-            */
-            $fileContent = ContactContentGenerator::generateContactContent($firstName, $name, $email, $message);
+        /*
+        - Si variables vide, on crée une instance du modèle de la classe
+        - If empty variables, we create an instance of the model class
+        */
+        if (empty($errorsSecurContact)) {
+            $contactModel = new ContactModel();
             
             /*
-            - Écrit le contenu généré dans le fichier en prenant le chemin dans la variable
-            - Write the generated content to the file by taking the path from the variable
+            - Appel la fonction pour insérer les données dans la BDD
+            - Call the function to insert data into the database
             */
-            $filePath = '../../../LogFiles/listContentContact.txt';
-            file_put_contents($filePath, $fileContent, FILE_APPEND | LOCK_EX);
-
-            /*
-            - Redirection vers la page d'accueil des visiteurs
-            - Redirect to the visitors' home page
-            */
-            header('Location: ../../views/Page/home.php');
-            exit();
+            if ($contactModel->insertContact($firstName, $name, $email, $message)) {
+    
+                /*
+                - Appel la fonction pour générer l'organisation des données dans un modèle
+                - Call the function to generate the organization of data in a model
+                */
+                $fileContent = ContactContentGenerator::generateContactContent($firstName, $name, $email, $message);
+                
+                /*
+                - Écrit le contenu généré dans le fichier en prenant le chemin dans la variable
+                - Write the generated content to the file by taking the path from the variable
+                */
+                $filePath = '../../../LogFiles/listContentContact.txt';
+                file_put_contents($filePath, $fileContent, FILE_APPEND | LOCK_EX);
+    
+                /*
+                - Redirection vers la page d'accueil des visiteurs
+                - Redirect to the visitors' home page
+                */
+                header('Location: ../../views/Page/home.php');
+                exit();
+            } else {
+                echo 'Erreur lors de l\'insertion des données.';
+            }
+        } else {
+            echo '$errorsSecurContact';
         }
     } else {
         /*
