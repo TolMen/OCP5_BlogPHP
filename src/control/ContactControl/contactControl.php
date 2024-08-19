@@ -38,8 +38,8 @@ if (isset($_POST['envoi'])) {
         $errorsSecurContact = $securityContact->checkSecurityContact($firstName, $name, $email, $message);
 
         /*
-        - Si variables vide, on crée une instance du modèle de la classe
-        - If empty variables, we create an instance of the model class
+        - Si variables errors vide, on crée une instance du modèle de la classe
+        - If variables errors empty, we create an instance of the model class
         */
         if (empty($errorsSecurContact)) {
             $contactModel = new ContactModel();
