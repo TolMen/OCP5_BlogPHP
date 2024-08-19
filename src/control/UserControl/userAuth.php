@@ -11,6 +11,7 @@ session_start();
 - Inclusion of necessary files
 */
 require_once '../../model/UserModel/userAuthModel.php';
+require_once '../../model/UserModel/userSecurityModel.php';
 require_once '../../model/LogModel/logWriteModel.php';
 
 /*
@@ -28,52 +29,70 @@ if (isset($_POST['connexion'])) {
         $mdp = $_POST['mdp'];
 
         /*
-        - Nouvelle instance du modèle de la classe
-        - New instance of the class model
+        - Nouvelle instance de la classe de sécurité
+        - New instance of the security class
         */
-        $userAuthModel = new UserAuthModel();
+        $securityAccount = new SecurityAccount;
 
         /*
-        - Récupère le pseudo fourni
-        - Retrieves the provided pseudo
+        - Appel de la fonction de vérification
+        - Call of the verification function
         */
-        $dataAuthUser = $userAuthModel->getAuthUser($pseudo);
+        $errorsSecurAccount = $securityAccount->checkSecurityAccount($pseudo, $mdp);
 
         /*
-        - Vérifie la présence du pseudo, puis si le MDP correspond au MDP haché dans la BDD
-        - Check if the pseudo exists, and if the password matches the hashed password in the database
+        - Si variables errors vide, on crée une instance du modèle de la classe
+        - If variables errors empty, we create an instance of the model class
         */
-        if ($dataAuthUser) {
-            if (password_verify($mdp, $dataAuthUser['mdp'])) {
+        if (empty($errorsSecurAccount)) {
+            $userAuthModel = new UserAuthModel();
 
-                /*
-                - Stock les informations dans des variables de session
-                - Store the information in session variables
-                */
-                $_SESSION['pseudo'] = $pseudo;
-                $_SESSION['id'] = $dataAuthUser['id'];
+            /*
+            - Récupère le pseudo fourni
+            - Retrieves the provided pseudo
+            */
+            $dataAuthUser = $userAuthModel->getAuthUser($pseudo);
 
-                /*
-                - Gestion des logs par un message et un appel de fonction
-                - Logs management by a message and a function call
-                */
-                $message = "ID : {$_SESSION['id']} = Connexion réussie pour l'utilisateur au pseudo '{$_SESSION['pseudo']}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
-                writeLog($message, "../../../LogFiles/login.log");
-
-                /*
-                - Redirection vers la page d'accueil des utilisateurs
-                - Redirect to the user's home page
-                */
-                header('Location: ../../views/Page/homeConnect.php');
-                exit();
+            /*
+            - Vérifie la présence du pseudo, puis si le MDP correspond au MDP haché dans la BDD
+            - Check if the pseudo exists, and if the password matches the hashed password in the database
+            */
+            if ($dataAuthUser) {
+                if (password_verify($mdp, $dataAuthUser['mdp'])) {
+    
+                    /*
+                    - Stock les informations dans des variables de session
+                    - Store the information in session variables
+                    */
+                    $_SESSION['pseudo'] = $pseudo;
+                    $_SESSION['id'] = $dataAuthUser['id'];
+    
+                    /*
+                    - Gestion des logs par un message et un appel de fonction
+                    - Logs management by a message and a function call
+                    */
+                    $message = "ID : {$_SESSION['id']} = Connexion réussie pour l'utilisateur au pseudo '{$_SESSION['pseudo']}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
+                    writeLog($message, "../../../LogFiles/login.log");
+    
+                    /*
+                    - Redirection vers la page d'accueil des utilisateurs
+                    - Redirect to the user's home page
+                    */
+                    header('Location: ../../views/Page/homeConnect.php');
+                    exit();
+                } else {
+                    echo 'Erreur lors de la connexion.';
+                }
             } else {
-                /*
-                - Si échecs, retourne au formulaire
-                - If failures, return to the form
-                */
-                header('Location: ../../views/Page/home.php');
-                exit();
+                echo '$errorsSecurAccount';
             }
         }
+    } else {
+        /*
+        - Si échecs, retourne au formulaire
+        - If failures, return to the form
+        */
+        header('Location: ../../views/Page/home.php');
+        exit();
     }
 }

@@ -12,6 +12,7 @@ session_start();
 */
 require_once '../../model/UserModel/userRegistModel.php';
 require_once '../../model/LogModel/logWriteModel.php';
+require_once '../../model/UserModel/userSecurityModel.php';
 
 /*
 - Vérifie si le formulaire est soumis, puis si les champs sont vide
@@ -25,45 +26,61 @@ if (isset($_POST['inscription'])) {
         - Data security
         */
         $pseudo = htmlspecialchars($_POST['pseudo']);
-        $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
+        $mdp = $_POST['mdp']; // We only hash the password after validation
 
         /*
-        - Nouvelle instance du modèle de la classe
-        - New instance of the class model
+        - Nouvelle instance de la classe de sécurité
+        - New instance of the security class
         */
-        $userRegistModel = new UserRegistModel();
+        $securityAccount = new SecurityAccount;
 
         /*
-        - Enregistre l'utilisateur, récupère ses informations, puis vérifie sa présence dans la BDD
-        - Register the user, retrieve his information, then check his presence in the database
+        - Appel de la fonction de vérification
+        - Call of the verification function
         */
-        if ($userRegistModel->insertRegistUser($pseudo, $mdp)) {
+        $errorsSecurAccount = $securityAccount->checkSecurityAccount($pseudo, $mdp);
 
-            $user = $userRegistModel->getRegistUser($pseudo, $mdp);
-
-            if ($user) {
+        /*
+        - Si variables errors vide, on crée une instance du modèle de la classe
+        - If variables errors empty, we create an instance of the model class
+        */
+        if (empty($errorsSecurAccount)) {
+            $mdpHash = password_hash($mdp, PASSWORD_DEFAULT);
+            $userRegistModel = new UserRegistModel();
+            
+            /*
+            - Enregistre l'utilisateur, récupère ses informations, puis vérifie sa présence dans la BDD
+            - Register the user, retrieve his information, then check his presence in the database
+            */
+            if ($userRegistModel->insertRegistUser($pseudo, $mdpHash)) {
+    
+                $user = $userRegistModel->getRegistUser($pseudo, $mdpHash);
+    
+                if ($user) {
+                    /*
+                    - Stock les informations dans des variables de session
+                    - Store the information in session variables
+                    */
+                    $_SESSION['pseudo'] = $pseudo;
+                    $_SESSION['id'] = $user['id'];
+                }
+    
                 /*
-                - Stock les informations dans des variables de session
-                - Store the information in session variables
+                - Gestion des logs par un message et un appel de fonction
+                - Logs management by a message and a function call
                 */
-                $_SESSION['pseudo'] = $pseudo;
-                $_SESSION['mdp'] = $mdp;
-                $_SESSION['id'] = $user['id'];
+                $message = "ID : {$_SESSION['id']} = Inscription réussie pour l'utilisateur au pseudo '{$_SESSION['pseudo']}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
+                writeLog($message, "../../../LogFiles/register.log");
+    
+                /*
+                - Redirection vers la page d'accueil des utilisateurs
+                - Redirect to the user's home page
+                */
+                header('Location: ../../views/Page/homeConnect.php');
+                exit();
             }
-
-            /*
-            - Gestion des logs par un message et un appel de fonction
-            - Logs management by a message and a function call
-            */
-            $message = "ID : {$_SESSION['id']} = Inscription réussie pour l'utilisateur au pseudo '{$_SESSION['pseudo']}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
-            writeLog($message, "../../../LogFiles/register.log");
-
-            /*
-            - Redirection vers la page d'accueil des utilisateurs
-            - Redirect to the user's home page
-            */
-            header('Location: ../../views/Page/homeConnect.php');
-            exit();
+        } else {
+            echo '$errorsSecurAccount';
         }
     } else {
         /*

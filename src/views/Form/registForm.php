@@ -19,12 +19,12 @@
             <h2>Inscription</h2>
             <!-- Input fields -->
             <div class="inputBox">
-                <input type="text" name="pseudo" autocomplete="off" required>
+                <input type="text" name="pseudo" pattern="[A-Za-zÀ-ÿ0-9_\-.]+" maxlength="26" title="Le pseudo peut contenir des lettres, des chiffres et les symboles .-_" autocomplete="off" required>
                 <span>Pseudo</span>
                 <i></i>
             </div>
             <div class="inputBox">
-                <input type="password" name="mdp" autocomplete="off" required>
+                <input type="password" name="mdp" pattern="[A-Za-zÀ-ÿ0-9.]+" maxlength="15" title="Le mot de passe doit contenir des lettres, des chiffres et uniquement le symboles POINT" autocomplete="off" required>
                 <span>Mot de passe</span>
                 <i></i>
             </div>
