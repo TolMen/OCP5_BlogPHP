@@ -1,7 +1,7 @@
-/* Import */
+/* CSS de base */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
 
-/* CSS General */
 * {
     margin: 0;
     padding: 0;
@@ -51,10 +51,6 @@ header .navbar a {
     color: #eef1ef;
 }
 
-header .navbar li:nth-child(3) a {
-    font-size: 0.7em;
-}
-
 header .navbar a::before {
     content: "";
     position: absolute;
@@ -101,54 +97,105 @@ header .navbar a:hover::before {
 
 /* ---------------------------------------------------------------------- */
 
-/* Footer = Networks */
+/* Article preview section */
 
-footer {
-    padding-bottom: 20px;
-}
-
-footer .boxFooter {
+.secArticle {
+    padding: 25px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-footer .boxFooter .boxNetwork {
+/* Section = Card Glass */
+
+.secArticle .boxCard {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1560px;
+    flex-wrap: wrap;
+    z-index: 1;
+    padding: 0 150px;
 }
 
-footer .boxFooter .boxNetwork ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer .boxFooter .boxNetwork li {
+.secArticle .boxCard .card {
+    position: relative;
+    width: 250px;
+    height: 250px;
     margin: 20px;
-    height: 60px;
-    width: 60px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 162px;
-    background: #0e131f;
-    box-shadow: 5px 5px 8px #070a10, -5px -5px 8px #151d2f;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
 }
 
-footer .boxFooter .boxNetwork li:hover {
-    box-shadow: inset 5px 5px 8px #070a10, inset -5px -5px 8px #151d2f;
+.secArticle .boxCard .card span {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 4em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
 }
 
-footer .boxFooter .boxNetwork ul li a {
-    font-size: 2em;
+.secArticle .boxCard .card h2 {
+    position: absolute;
+    font-size: 1.8em;
+    text-align: center;
+    pointer-events: none;
+    opacity: 1;
+    transition: 0.5s;
+    font-family: "Poppins", sans-serif;
+    color: #eef1ef;
+}
+
+.secArticle .boxCard .card:hover h2 {
+    opacity: 0;
+}
+
+.secArticle .boxCard .card .information {
     display: flex;
     justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.secArticle .boxCard .card .information:hover p {
+    opacity: 1;
+}
+
+.secArticle .boxCard .card p {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s;
+    color: #eef1ef;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Footer */
+
+footer .boxFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 125px;
-    width: 125px;
+    padding-bottom: 20px;
 }
 
 footer .boxFooter p {
@@ -157,38 +204,23 @@ footer .boxFooter p {
     color: #eef1ef;
 }
 
-/* Color of the different networks */
-
-footer .boxFooter .boxNetwork ul li:nth-child(1) a {
-    color: #0e76a8;
-}
-
-footer .boxFooter .boxNetwork ul li:nth-child(2) a {
-    color: #ffffff;
-}
-
-footer .boxFooter .boxNetwork ul li:nth-child(3) a {
-    color: #14ff1c;
-}
-
 /* ---------------------------------------------------------------------- */
 
 /* CSS Responsive */
 
+@media screen and (max-width: 1169px) {
+    .secArticle .boxCard {
+        padding: 0 50px;
+    }
+}
+
 @media screen and (min-width: 900px) {
-
-    .infoPage .title {
-        font-size: 2.5em;
+    .infoPage .title h2 {
+        font-size: 2.8em;
     }
 
-    .infoPage .text {
-        font-size: 2em;
-    }
-
-    footer .boxFooter .boxNetwork li {
-        margin: 25px;
-        height: 75px;
-        width: 75px;
+    .infoPage .text p {
+        font-size: 1.5em;
     }
 
     footer .boxFooter p {
@@ -197,7 +229,6 @@ footer .boxFooter .boxNetwork ul li:nth-child(3) a {
 }
 
 @media screen and (min-width: 600px) {
-
     .infoPage .title {
         font-size: 2em;
     }
@@ -206,19 +237,12 @@ footer .boxFooter .boxNetwork ul li:nth-child(3) a {
         font-size: 1.5em;
     }
 
-    footer .boxFooter .boxNetwork li {
-        margin: 25px;
-        height: 75px;
-        width: 75px;
-    }
-
     footer .boxFooter p {
         font-size: 1.4em;
     }
 }
 
 @media screen and (max-width: 600px) {
-    
     header {
         height: 100px;
         flex-direction: column;
@@ -231,11 +255,6 @@ footer .boxFooter .boxNetwork ul li:nth-child(3) a {
     header .navbar li {
         padding: 0 20px;
     }
-
-    header .navbar li:nth-child(2) {
-        order: 3;
-    }
-
 }
 
 /* ---------------------------------------------------------------------- */

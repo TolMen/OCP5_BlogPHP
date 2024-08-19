@@ -136,6 +136,10 @@ header .topPage .text {
 
 /* Footer = Networks */
 
+footer {
+    padding-bottom: 20px;
+}
+
 footer .boxFooter .boxNetwork ul {
     display: flex;
     justify-content: center;
@@ -170,7 +174,6 @@ footer .boxFooter .boxNetwork ul li a {
 footer .boxFooter p {
     color: #eef1ef;
     text-align: center;
-    padding-bottom: 20px;
     font-size: 0.9em;
 }
 

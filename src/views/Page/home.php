@@ -35,10 +35,10 @@
             <div class="boxChoise">
                 <div class="projectGrid">
                     <div class="boxCard">
-                        <a href="#">
+                        <a href="previewArt.php">
                             <div class="card">
                                 <span>01</span>
-                                <h2>Articles</h2>
+                                <h2>Aperçu Art.</h2>
                             </div>
                         </a>
                         <a href="../Form/loginForm.php">
@@ -142,8 +142,7 @@
                             <a
                                 target="_blank"
                                 href="https://www.linkedin.com/in/jessyfrachisse/"
-                                ><ion-icon name="logo-linkedin"></ion-icon
-                            ></a>
+                                ><ion-icon name="logo-linkedin"></ion-icon></a>
                         </li>
                         <li>
                             <a target="_blank" href="https://github.com/TolMen"
