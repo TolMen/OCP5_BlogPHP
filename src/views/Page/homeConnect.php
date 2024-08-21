@@ -23,7 +23,7 @@
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Articles</a></li>
+                    <li><a href="previewArtUser.php">Articles</a></li>
                     <li><a href="#">Soon</a></li>
                     <li><a href="../../control/UserControl/userStop.php">Déconnexion</a></li>
                 </ul>
