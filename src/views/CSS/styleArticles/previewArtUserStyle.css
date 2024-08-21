@@ -1,0 +1,130 @@
+/* ---------------------------------------------------------------------- */
+
+/* Page header */
+
+header .navbar li:nth-child(2) a {
+    font-size: 0.7em;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Article preview section */
+
+.secArticle {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section = Card Glass */
+
+.secArticle .boxCard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1560px;
+    flex-wrap: wrap;
+    z-index: 1;
+    padding: 0 150px;
+}
+
+.secArticle .boxCard .card {
+    position: relative;
+    width: 290px;
+    height: 400px;
+    margin: 15px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.secArticle .boxCard .card span {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 6em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.secArticle .boxCard .card .titleArt {
+    position: absolute;
+    font-size: 1.4em;
+    font-weight: normal;
+    padding: 10px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 1;
+    transition: 0.3s;
+    color: #eef1ef;
+}
+
+.secArticle .boxCard .card .dateArt {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    opacity: 1;
+    transition: 0.3s;
+    color: #eef1ef;
+    font-size: 1em;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.secArticle .boxCard .card:hover .titleArt,
+.secArticle .boxCard .card:hover .dateArt {
+    opacity: 0;
+}
+
+.secArticle .boxCard .card .information {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.secArticle .boxCard .card .information:hover .chapoArt,
+.secArticle .boxCard .card .information:hover .moreArt {
+    opacity: 1;
+}
+
+.secArticle .boxCard .card .information .chapoArt {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    opacity: 0;
+    transition: 0.3s;
+    color: #eef1ef;
+}
+
+.secArticle .boxCard .card .information .moreArt {
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s;
+    color: #d639ce;
+    padding-bottom: 10px;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* CSS Responsive */
+
+@media screen and (max-width: 1169px) {
+    .secArticle .boxCard {
+        padding: 0 50px;
+    }
+}
