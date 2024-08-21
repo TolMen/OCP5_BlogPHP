@@ -13,7 +13,8 @@
             content="Vous trouverez sur cette page, un aperçu de quelque articles du site de blog de Jessy pour les visiteurs non-inscrit"
         />
         <!-- CSS -->
-        <link rel="stylesheet" href="../CSS/styleArticles/previewArtVisitorStyle.css" />
+        <link rel="stylesheet" href="../CSS/styleArticles/previewArtBaseStyle.css" />
+        <link rel="stylesheet" href="../CSS/styleArticles//previewArtVisitorStyle.css">
     </head>
     <body>
         <!-- Page header -->
