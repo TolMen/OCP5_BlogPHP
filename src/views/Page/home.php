@@ -35,7 +35,7 @@
             <div class="boxChoise">
                 <div class="projectGrid">
                     <div class="boxCard">
-                        <a href="previewArt.php">
+                        <a href="previewArtVisitor.php">
                             <div class="card">
                                 <span>01</span>
                                 <h2>Aperçu Art.</h2>
