@@ -5,6 +5,7 @@
 - Necessary file inclusion
 */
 require_once '../../control/BDDControl/connectBDD.php'; 
+
 class ArtDeletModel {
     
     /*
