@@ -28,7 +28,6 @@ header .navbar li:nth-child(2) a {
     max-width: 1560px;
     flex-wrap: wrap;
     z-index: 1;
-    padding: 0 150px;
 }
 
 .secArticle .boxCard .card {
