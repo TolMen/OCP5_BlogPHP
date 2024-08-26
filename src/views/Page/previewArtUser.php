@@ -45,7 +45,7 @@
         <section class="secArticle">
             <div class="boxCard">
                 <!-- Include the controller and avoid logic in the view -->
-                <?php include '../../control/ArtControl/postArt.php'; ?>
+                <?php include '../../control/ArtControl/previewArt.php'; ?>
             </div>
         </section>
         <!-- End of section for article preview -->
