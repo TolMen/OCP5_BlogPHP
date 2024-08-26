@@ -27,8 +27,8 @@
         </header>
         <!-- End of Page Header -->
 
-        <!-- Middle of the page -->
-        <section class="listMembres">
+        <!-- List Users -->
+        <section class="listUsers">
             <h2>
                 Liste des Membres
             </h2>
@@ -37,9 +37,41 @@
                 <?php include '../../control/AdminControl/listUser.php'; ?>
             </div>
         </section>
-        <!-- End of Middle of Page -->
+        <!-- End of List Users -->
 
-
-
+        <!-- Section to publish an article -->
+        <section class="addArt">
+            <h2>
+                Publier un article
+            </h2>
+            <div class="formAddArt">
+                <form method="POST" action="../../control/AdminControl/addArt.php">
+                    <div class="inputBox">
+                        <span>Numéro</span>
+                        <input type="number" name="numero" autocomplete="off" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Titre</span>
+                        <input type="text" name="title" autocomplete="off" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Chapô</span>
+                        <input type="text" name="chapo" autocomplete="off" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Contenu</span>
+                        <textarea name="content" autocomplete="off" required></textarea>
+                    </div>
+                    <div class="inputBox">
+                        <span>Date de publication</span>
+                        <input type="date" name="datePublication" autocomplete="off" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="publishArticle" value="Publier l'article">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- End of Section to publish an article -->
     </body>
 </html>

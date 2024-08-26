@@ -72,9 +72,9 @@ header .navbar a:hover::before {
 
 /* ---------------------------------------------------------------------- */
 
-/* Middle of the page */
+/* List Users */
 
-.listMembres {
+.listUsers {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +82,7 @@ header .navbar a:hover::before {
     padding-top: 25px;
 }
 
-.listMembres div {
+.listUsers div {
     padding-top: 15px;
     display: flex;
     flex-direction: column;
@@ -90,11 +90,35 @@ header .navbar a:hover::before {
     align-items: center;
 }
 
-.listMembres div a {
+.listUsers div a {
     color: red;
     font-weight: bold;
 }
 
+/* ---------------------------------------------------------------------- */
+
+/* Add Articles */
+
+.addArt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.addArt .formAddArt {
+    padding-top: 15px;
+}
+
+.addArt .formAddArt div {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* ---------------------------------------------------------------------- */
 
