@@ -1,0 +1,163 @@
+/* CSS de base */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #0e131f;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Page header */
+
+header {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .boxLogo {
+    padding-left: 50px;
+}
+
+header .boxLogo img {
+    height: 55px;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar li {
+    padding-right: 50px;
+}
+
+header .navbar a {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #eef1ef;
+}
+
+header .navbar a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #eef1ef;
+    transition: 0.3s;
+}
+
+header .navbar a:hover::before {
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Middle of the page */
+
+.infoPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.infoPage .title {
+    font-size: 1.2em;
+    font-family: "Press Start 2P", cursive;
+    padding-bottom: 25px;
+    text-shadow: 0px 0px 10px #eef1ef;
+    color: #eef1ef;
+}
+
+.infoPage .text {
+    padding: 0px 10%;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #eef1ef;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Footer */
+
+footer .boxFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+footer .boxFooter p {
+    text-align: center;
+    font-size: 0.9em;
+    color: #eef1ef;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* CSS Responsive */
+
+@media screen and (min-width: 900px) {
+    .infoPage .title h2 {
+        font-size: 2.8em;
+    }
+
+    .infoPage .text p {
+        font-size: 1.5em;
+    }
+
+    footer .boxFooter p {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .infoPage .title {
+        font-size: 2em;
+    }
+
+    .infoPage .text {
+        font-size: 1.5em;
+    }
+
+    footer .boxFooter p {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 100px;
+        flex-direction: column;
+    }
+
+    header .boxLogo {
+        padding: 10px 0 0;
+    }
+
+    header .navbar li {
+        padding: 0 20px;
+    }
+}
+
+/* ---------------------------------------------------------------------- */
