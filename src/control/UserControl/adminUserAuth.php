@@ -37,6 +37,6 @@ if ($pseudo === $adminPseudo && $mdp === $adminPassword) {
     - Redirection vers la page d'administration
     - Redirect to the admin page
     */
-    header('Location: ../../../README.md');
+    header('Location: ../../views/Admin/dashboard.php');
     exit();
 }
