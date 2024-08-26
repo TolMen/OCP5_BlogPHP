@@ -29,6 +29,12 @@ if (isset($_POST['connexion'])) {
         $mdp = $_POST['mdp'];
 
         /*
+        - Inclus le fichier pour la connexion de l'administrateur
+        - Included file for administrator login
+        */
+        include 'adminUserAuth.php';
+
+        /*
         - Nouvelle instance de la classe de sécurité
         - New instance of the security class
         */
