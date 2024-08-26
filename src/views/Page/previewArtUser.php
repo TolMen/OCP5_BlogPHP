@@ -44,17 +44,8 @@
         <!-- Article preview section -->
         <section class="secArticle">
             <div class="boxCard">
-                <div class="card">
-                    <span>01</span>
-                    <h2 class="titleArt">Titre de l'article</h2>
-                    <p class="dateArt">XX/XX/XXXX</p>
-                    <div class="information">
-                        <p class="chapoArt">
-                            Chapô de l'article...
-                        </p>
-                        <a href="#" class="moreArt">En savoir plus...</a>
-                    </div>
-                </div>
+                <!-- Include the controller and avoid logic in the view -->
+                <?php include '../../control/ArtControl/postArt.php'; ?>
             </div>
         </section>
         <!-- End of section for article preview -->
