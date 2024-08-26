@@ -1,0 +1,124 @@
+/* CSS de base */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #eef1ef;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Page header */
+
+header {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .boxLogo {
+    padding-left: 50px;
+}
+
+header .boxLogo img {
+    height: 55px;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar li {
+    padding-right: 50px;
+}
+
+header .navbar a {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #000000;
+}
+
+header .navbar li:nth-child(3) a {
+    font-size: 0.7em;
+}
+
+header .navbar a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: 0.3s;
+}
+
+header .navbar a:hover::before {
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Middle of the page */
+
+.listMembres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+}
+
+.listMembres div {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.listMembres div a {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------------------- */
+
+/* CSS Responsive */
+
+@media screen and (max-width: 600px) {
+    
+    header {
+        height: 100px;
+        flex-direction: column;
+    }
+
+    header .boxLogo {
+        padding: 10px 0 0;
+    }
+
+    header .navbar li {
+        padding: 0 20px;
+    }
+
+    header .navbar li:nth-child(2) {
+        order: 3;
+    }
+
+}
+
+/* ---------------------------------------------------------------------- */
