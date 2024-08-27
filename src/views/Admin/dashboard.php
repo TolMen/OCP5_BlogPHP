@@ -45,7 +45,7 @@
                 Publier un article
             </h2>
             <div class="formAddArt">
-                <form method="POST" action="../../control/AdminControl/addArt.php">
+                <form method="POST" action="../../control/ArtControl/addArt.php">
                     <div class="inputBox">
                         <span>Numéro</span>
                         <input type="number" name="numero" autocomplete="off" required>

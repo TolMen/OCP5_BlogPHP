@@ -4,7 +4,7 @@
 - Inclusion des fichiers nécessaire
 - Inclusion of necessary files
 */
-require_once '../../model/AdminModel/addArtModel.php';
+require_once '../../model/ArtModel/addArtModel.php';
 
 if (isset($_POST['publishArticle'])) {
 

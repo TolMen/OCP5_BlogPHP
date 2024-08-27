@@ -30,7 +30,7 @@ if ($pseudo === $adminPseudo && $mdp === $adminPassword) {
     - Gestion des logs par un message et un appel de fonction
     - Logs management by a message and a function call
     */
-    $message = "Connexion réussie pour l'administrateur '{$pseudo}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
+    $message = "Info : Connexion réussie pour l'administrateur '{$pseudo}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
     writeLog($message, "../../../LogFiles/login.log");
 
     /*
