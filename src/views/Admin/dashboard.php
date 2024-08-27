@@ -19,25 +19,11 @@
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="previewArtUser.php">Articles</a></li>
-                    <li><a href="#">Soon</a></li>
                     <li><a href="../../control/UserControl/userStop.php">Déconnexion</a></li>
                 </ul>
             </nav>
         </header>
         <!-- End of Page Header -->
-
-        <!-- List Users -->
-        <section class="listUsers">
-            <h2>
-                Liste des Membres
-            </h2>
-            <div>
-                <!-- Include the controller and avoid logic in the view -->
-                <?php include '../../control/AdminControl/listUser.php'; ?>
-            </div>
-        </section>
-        <!-- End of List Users -->
 
         <!-- Section to publish an article -->
         <section class="addArt">
@@ -73,5 +59,29 @@
             </div>
         </section>
         <!-- End of Section to publish an article -->
+
+        <!-- List Articles -->
+        <section class="listArt">
+            <h2>
+                Liste des Articles
+            </h2>
+            <div>
+                <!-- Include the controller and avoid logic in the view -->
+                <?php include '../../control/AdminControl/listArt.php'; ?>
+            </div>
+        </section>
+        <!-- End of List Articles -->
+        
+        <!-- List Users -->
+        <section class="listUsers">
+            <h2>
+                Liste des Membres
+            </h2>
+            <div>
+                <!-- Include the controller and avoid logic in the view -->
+                <?php include '../../control/AdminControl/listUser.php'; ?>
+            </div>
+        </section>
+        <!-- End of List Users -->
     </body>
-</html>
+    </html>
