@@ -46,13 +46,9 @@ header .navbar li {
 
 header .navbar a {
     position: relative;
-    font-size: 1.2em;
+    font-size: 0.7em;
     font-weight: 500;
     color: #000000;
-}
-
-header .navbar li:nth-child(3) a {
-    font-size: 0.7em;
 }
 
 header .navbar a::before {
@@ -72,9 +68,10 @@ header .navbar a:hover::before {
 
 /* ---------------------------------------------------------------------- */
 
-/* List Users */
+/* List Users and Delete Articles */
 
-.listUsers {
+.listUsers,
+.listArt {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +79,8 @@ header .navbar a:hover::before {
     padding-top: 25px;
 }
 
-.listUsers div {
+.listUsers div,
+.listArt div {
     padding-top: 15px;
     display: flex;
     flex-direction: column;
@@ -90,7 +88,8 @@ header .navbar a:hover::before {
     align-items: center;
 }
 
-.listUsers div a {
+.listUsers div a,
+.listArt div a {
     color: red;
     font-weight: bold;
 }
@@ -137,10 +136,6 @@ header .navbar a:hover::before {
 
     header .navbar li {
         padding: 0 20px;
-    }
-
-    header .navbar li:nth-child(2) {
-        order: 3;
     }
 
 }
