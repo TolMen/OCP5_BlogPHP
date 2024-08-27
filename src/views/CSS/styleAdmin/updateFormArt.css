@@ -1,0 +1,43 @@
+/* CSS de base */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #eef1ef;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Edit Articles */
+
+.editArt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.editArt .formEditArt {
+    padding-top: 15px;
+}
+
+.editArt .formEditArt div {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------------------------------------------------------------- */
