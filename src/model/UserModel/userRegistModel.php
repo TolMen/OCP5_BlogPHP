@@ -19,7 +19,7 @@ class UserRegistModel {
     public function insertRegistUser($pseudo, $mdpHash) {
         global $bdd;
 
-        $insertUser = $bdd->prepare('INSERT INTO users(pseudo, mdp) VALUES (?, ?)');
+        $insertUser = $bdd->prepare('INSERT INTO users(pseudo, mdp, roles) VALUES (?, ?, "Inscrit")');
 
         return $insertUser->execute([$pseudo, $mdpHash]);
     }

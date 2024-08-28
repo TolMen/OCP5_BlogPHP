@@ -1,0 +1,143 @@
+/* CSS de base */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #eef1ef;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Page header */
+
+header {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .boxLogo {
+    padding-left: 50px;
+}
+
+header .boxLogo img {
+    height: 55px;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar li {
+    padding-right: 50px;
+}
+
+header .navbar a {
+    position: relative;
+    font-size: 0.7em;
+    font-weight: 500;
+    color: #000000;
+}
+
+header .navbar a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: 0.3s;
+}
+
+header .navbar a:hover::before {
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* List Users and Delete Articles */
+
+.listUsers,
+.listArt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+}
+
+.listUsers div,
+.listArt div {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.listUsers div a,
+.listArt div a {
+    color: red;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Add Articles */
+
+.addArt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.addArt .formAddArt {
+    padding-top: 15px;
+}
+
+.addArt .formAddArt div {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* CSS Responsive */
+
+@media screen and (max-width: 600px) {
+    
+    header {
+        height: 100px;
+        flex-direction: column;
+    }
+
+    header .boxLogo {
+        padding: 10px 0 0;
+    }
+
+    header .navbar li {
+        padding: 0 20px;
+    }
+
+}
+
+/* ---------------------------------------------------------------------- */
