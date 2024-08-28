@@ -19,6 +19,9 @@ $recupListUser = $listUserModel->getListUser();
 */
 foreach ($recupListUser as $user) {
 ?>
-    <p><?= $user['pseudo']; ?> -> <a href="../../control/UserControl/userBan.php?id=<?= $user['id']; ?>">Bannir</a></p>
+    <p><?= $user['pseudo']; ?> / Rôles : <?= $user['roles']; ?> --> 
+    <a href="../../control/UserControl/userBan.php?id=<?= $user['id']; ?>">Bannir</a> / 
+    <a href="../../control/UserControl/userRole.php?id=<?= $user['id']; ?>&action=promote">Promouvoir</a> / 
+    <a href="../../control/UserControl/userRole.php?id=<?= $user['id']; ?>&action=demote">Rétrograder</a></p>
 <?php
 }
