@@ -52,9 +52,9 @@ if (isset($_POST['inscription'])) {
             - Enregistre l'utilisateur, récupère ses informations, puis vérifie sa présence dans la BDD
             - Register the user, retrieve his information, then check his presence in the database
             */
-            if ($userRegistModel->insertRegistUser($pseudo, $mdpHash)) {
+            if ($userRegistModel->insertRegistUser($bdd, $pseudo, $mdpHash)) {
     
-                $user = $userRegistModel->getRegistUser($pseudo, $mdpHash);
+                $user = $userRegistModel->getRegistUser($bdd, $pseudo, $mdpHash);
     
                 if ($user) {
                     /*
