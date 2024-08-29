@@ -12,7 +12,7 @@ class UpdateArticleModel {
     - Cette fonction récupére les information effectue une liaison à la BDD, puis exécute une requête SQL selection
     - This function retrieves the information, links it to the database, then executes an select SQL query
     */
-    public function getArticleId($bdd, $articleId) {
+    public function getArticleId(PDO $bdd, $articleId) {
         $recupArt = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
         $recupArt->execute([$articleId]);
         return $recupArt->fetch(PDO::FETCH_ASSOC);
@@ -22,7 +22,7 @@ class UpdateArticleModel {
     - Cette fonction récupére les information effectue une liaison à la BDD, puis exécute une requête SQL de mise à jour
     - This function retrieves the information, links it to the database, then executes an update SQL query
     */
-    public function updateArticle($bdd, $articleId, $title, $chapo, $content, $dateUpdate) {
+    public function updateArticle(PDO $bdd, $articleId, $title, $chapo, $content, $dateUpdate) {
         $updateArt = 'UPDATE articles SET title = ?, chapo = ?, content = ?, dateUpdate = ? WHERE id = ?';
         $updateArticle = $bdd->prepare($updateArt);
         return $updateArticle->execute([$title, $chapo, $content, $dateUpdate, $articleId]);
