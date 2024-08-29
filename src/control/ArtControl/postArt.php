@@ -13,7 +13,7 @@ require_once '../../model/ArtModel/postArtModel.php';
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $postArtId = intval($_GET['id']);
 } else {
-    die('Identifiant de l\'article non spécifié.');
+    throw new Exception("Identifiant de l'article non spécifié.");
 }
 
 /*

@@ -39,5 +39,5 @@ if ($pseudo === $adminPseudo && $mdp === $adminPassword) {
     - Redirect to the admin page
     */
     header('Location: ../../views/Admin/dashboard.php');
-    exit();
+    throw new Exception("Redirection vers la page d'administration");
 }

@@ -78,7 +78,7 @@ if (isset($_POST['inscription'])) {
                 - Redirect to the user's home page
                 */
                 header('Location: ../../views/Page/homeConnect.php');
-                exit();
+                throw new Exception("Redirection vers la page d'accueil des utilisateurs");
             }
         } else {
             echo '$errorsSecurAccount';
@@ -89,6 +89,6 @@ if (isset($_POST['inscription'])) {
         - If failures, return to the form
         */
         header('Location: ../../views/Form/registForm.php');
-        exit();
+        throw new Exception("Retourne au formulaire");
     }
 }

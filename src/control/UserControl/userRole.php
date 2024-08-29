@@ -37,5 +37,5 @@ if (isset($_GET['id']) && isset($_GET['action'])) {
     - Redirect to the dashboard
     */
     header('Location: ../../views/Admin/dashboard.php');
-    exit();
+    throw new Exception("Redirection vers le tableau de bord");
 }

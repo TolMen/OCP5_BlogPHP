@@ -86,7 +86,7 @@ if (isset($_POST['connexion'])) {
                     - Redirect to the user's home page
                     */
                     header('Location: ../../views/Page/homeConnect.php');
-                    exit();
+                    throw new Exception("Redirection vers la page d'accueil des utilisateurs");
                 } else {
                     echo 'Erreur lors de la connexion.';
                 }
@@ -100,6 +100,6 @@ if (isset($_POST['connexion'])) {
         - If failures, return to the form
         */
         header('Location: ../../views/Page/home.php');
-        exit();
+        throw new Exception("Retourne au formulaire");
     }
 }

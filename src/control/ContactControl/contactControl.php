@@ -68,7 +68,7 @@ if (isset($_POST['envoi'])) {
                 - Redirect to the visitors' home page
                 */
                 header('Location: ../../views/Page/home.php');
-                exit();
+                throw new Exception("Redirection vers la page actuel des visiteurs");
             } else {
                 echo 'Erreur lors de l\'insertion des données.';
             }
@@ -81,6 +81,6 @@ if (isset($_POST['envoi'])) {
         - If failures, redirect to an error page
         */
         header('Location: ###');
-        exit();
+        throw new Exception("Redirection vers une page d'erreur");
     }
 }

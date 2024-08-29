@@ -33,4 +33,4 @@ $logWrite->writeLog($message, "../../../LogFiles/logout.log");
 - Redirect to the visitors' home page
 */
 header('Location: ../../views/Page/home.php');
-exit();
+throw new Exception("Redirection vers la page d'accueil des visiteurs");

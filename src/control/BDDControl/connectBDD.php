@@ -35,5 +35,5 @@ try {
     $logWrite = new LogWriteModel();
     $message = "ERREUR Base de données indisponible : " . $e->getMessage() . PHP_EOL . PHP_EOL;
     $logWrite->writeLog($message, "LogFiles/error.log");
-    die;
+    throw new Exception("Base de données indisponible");
 }
