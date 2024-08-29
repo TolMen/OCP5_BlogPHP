@@ -23,7 +23,7 @@ if (isset($_POST['publishArticle'])) {
     - Create an instance of the class, then retrieve the information
     */
     $addArticleModel = new AddArticleModel();
-    if ($addArticleModel->insertArticle($numero, $title, $chapo, $content, $datePublication)) {
+    if ($addArticleModel->insertArticle($bdd, $numero, $title, $chapo, $content, $datePublication)) {
 
         /*
         - Redirection vers le tableau de bord
