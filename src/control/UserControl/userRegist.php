@@ -69,8 +69,9 @@ if (isset($_POST['inscription'])) {
                 - Gestion des logs par un message et un appel de fonction
                 - Logs management by a message and a function call
                 */
+                $logWrite = new LogWriteModel();
                 $message = "ID : {$_SESSION['id']} = Inscription réussie pour l'utilisateur au pseudo '{$_SESSION['pseudo']}' - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
-                writeLog($message, "../../../LogFiles/register.log");
+                $logWrite->writeLog($message, "../../../LogFiles/register.log");
     
                 /*
                 - Redirection vers la page d'accueil des utilisateurs

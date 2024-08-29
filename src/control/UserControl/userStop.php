@@ -24,8 +24,9 @@ session_destroy();
 - Gestion des logs par un message et un appel de fonction
 - Logs management by a message and a function call
 */
+$logWrite = new LogWriteModel();
 $message = "Info : Déconnexion réussie pour un utilisateur " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
-writeLog($message, "../../../LogFiles/logout.log");
+$logWrite->writeLog($message, "../../../LogFiles/logout.log");
 
 /*
 - Redirection vers la page d'accueil des visiteurs

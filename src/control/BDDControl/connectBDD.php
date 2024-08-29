@@ -32,7 +32,8 @@ try {
     - Si échec, l'exception est déclenche pour enregistrer un message d'erreur dans les logs, puis arrête le script pour éviter d'aller dans les pages du site
     - If failure, the exception is triggered to record an error message in the logs, then stops the script to avoid going to the site pages
     */
+    $logWrite = new LogWriteModel();
     $message = "ERREUR Base de données indisponible : " . $e->getMessage() . PHP_EOL . PHP_EOL;
-    writeLog($message, "LogFiles/error.log");
+    $logWrite->writeLog($message, "LogFiles/error.log");
     die;
 }

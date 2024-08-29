@@ -38,8 +38,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             - Gestion des logs par un message et un appel de fonction
             - Logs management by a message and a function call
             */
+            $logWrite = new LogWriteModel();
             $message = "ID : {$userId} = L'utilisateur a été banni avec succès - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
-            writeLog($message, "../../../LogFiles/ban.log");
+            $logWrite->writeLog($message, "../../../LogFiles/ban.log");
 
             /*
             - Redirection vers la page actuel

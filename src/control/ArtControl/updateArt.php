@@ -42,8 +42,9 @@ if (isset($_POST['updateArticle'])) {
         - Gestion des logs par un message et un appel de fonction
         - Logs management by a message and a function call
         */
+        $logWrite = new LogWriteModel();
         $message = "Article ID : {$articleId} = L'article a été modifier avec succès - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
-        writeLog($message, "../../../LogFiles/artEdit.log");
+        $logWrite->writeLog($message, "../../../LogFiles/artEdit.log");
 
         /*
         - Redirection vers le tableau de bord

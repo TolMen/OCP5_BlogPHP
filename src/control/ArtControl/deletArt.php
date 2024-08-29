@@ -38,8 +38,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             - Gestion des logs par un message et un appel de fonction
             - Logs management by a message and a function call
             */
+            $logWrite = new LogWriteModel();
             $message = "Article ID : {$artId} = L'article a été supprimé avec succès - " . date("d-m-Y H:i:s") . PHP_EOL . PHP_EOL;
-            writeLog($message, "../../../LogFiles/artDelet.log");
+            $logWrite->writeLog($message, "../../../LogFiles/artDelet.log");
 
             /*
             - Redirection vers la page actuel
