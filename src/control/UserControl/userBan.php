@@ -25,14 +25,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     */
     $userId = $_GET['id'];
     $userBanModel = new UserBanModel();
-    $user = $userBanModel->getBanUser($userId);
+    $user = $userBanModel->getBanUser($bdd, $userId);
 
     /*
     - Vérifie si l'utilisateur existe, puis tente de le supprimer par l'appel de fonction
     - Checks if the user exists, then tries to delete it by calling the function
     */
     if ($user) {
-        if ($userBanModel->deleteBanUser($userId)) {
+        if ($userBanModel->deleteBanUser($bdd, $userId)) {
 
             /*
             - Gestion des logs par un message et un appel de fonction

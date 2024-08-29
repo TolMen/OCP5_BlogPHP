@@ -11,7 +11,7 @@ require_once '../../model/AdminModel/listArtModel.php';
 - Create an instance of the class, then retrieve the list of articles
 */
 $listArtModel = new ListArtModel();
-$recupListArt = $listArtModel->getListArt();
+$recupListArt = $listArtModel->getListArt($bdd);
 
 /*
 - Boucle pour chaque articles récupéré afin de les afficher dans une structure HTML

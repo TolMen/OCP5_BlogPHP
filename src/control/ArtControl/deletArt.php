@@ -25,14 +25,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     */
     $artId = $_GET['id'];
     $artDeletModel = new ArtDeletModel();
-    $article = $artDeletModel->getDeletArt($artId);
+    $article = $artDeletModel->getDeletArt($bdd, $artId);
     
     /*
     - Vérifie si l'article existe, puis tente de le supprimer par l'appel de fonction
     - Checks if the article exists, then tries to delete it by calling the function
     */
     if ($article) {
-        if ($artDeletModel->deletArt($artId)) {
+        if ($artDeletModel->deletArt($bdd, $artId)) {
 
             /*
             - Gestion des logs par un message et un appel de fonction

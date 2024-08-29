@@ -48,7 +48,7 @@ if (isset($_POST['envoi'])) {
             - Appel la fonction pour insérer les données dans la BDD
             - Call the function to insert data into the database
             */
-            if ($contactModel->insertContact($firstName, $name, $email, $message)) {
+            if ($contactModel->insertContact($bdd, $firstName, $name, $email, $message)) {
     
                 /*
                 - Appel la fonction pour générer l'organisation des données dans un modèle

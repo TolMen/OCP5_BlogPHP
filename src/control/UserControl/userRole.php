@@ -27,9 +27,9 @@ if (isset($_GET['id']) && isset($_GET['action'])) {
     - Check the action and call the corresponding function
     */
     if ($action == 'promote') {
-        $userRoleModel->promoteUser($userId);
+        $userRoleModel->promoteUser($bdd, $userId);
     } elseif ($action == 'demote') {
-        $userRoleModel->demoteUser($userId);
+        $userRoleModel->demoteUser($bdd, $userId);
     }
 
     /*

@@ -18,7 +18,7 @@ if (isset($_GET['id'])) {
     - Create an instance of the class, then retrieve the information
     */
     $updateArticleModel = new UpdateArticleModel();
-    $article = $updateArticleModel->getArticleId($articleId);
+    $article = $updateArticleModel->getArticleId($bdd, $articleId);
 }
 
 if (isset($_POST['updateArticle'])) {
@@ -36,7 +36,7 @@ if (isset($_POST['updateArticle'])) {
     - Mise à jour de l'article
     - Update the article
     */
-    if ($updateArticleModel->updateArticle($articleId, $title, $chapo, $content, $dateUpdate)) {
+    if ($updateArticleModel->updateArticle($bdd, $articleId, $title, $chapo, $content, $dateUpdate)) {
 
         /*
         - Gestion des logs par un message et un appel de fonction

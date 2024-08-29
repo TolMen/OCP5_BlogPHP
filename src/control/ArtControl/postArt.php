@@ -21,7 +21,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 - Create an instance of the class, then retrieve all articles by calling the function
 */
 $artPostModel = new ArtPostModel();
-$articles = $artPostModel->getPostArt($postArtId);
+$articles = $artPostModel->getPostArt($bdd, $postArtId);
 
 /*
 - Boucle pour chaque article récupéré afin de les afficher dans une structure HTML

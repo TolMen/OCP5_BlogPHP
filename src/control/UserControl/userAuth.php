@@ -57,7 +57,7 @@ if (isset($_POST['connexion'])) {
             - Récupère le pseudo fourni
             - Retrieves the provided pseudo
             */
-            $dataAuthUser = $userAuthModel->getAuthUser($pseudo);
+            $dataAuthUser = $userAuthModel->getAuthUser($bdd, $pseudo);
 
             /*
             - Vérifie la présence du pseudo, puis si le MDP correspond au MDP haché dans la BDD

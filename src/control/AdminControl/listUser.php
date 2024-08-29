@@ -11,7 +11,7 @@ require_once '../../model/AdminModel/listUserModel.php';
 - Create an instance of the class, then retrieve the list of users
 */
 $listUserModel = new ListUserModel();
-$recupListUser = $listUserModel->getListUser();
+$recupListUser = $listUserModel->getListUser($bdd);
 
 /*
 - Boucle pour chaque utilisateurs récupéré afin de les afficher dans une structure HTML

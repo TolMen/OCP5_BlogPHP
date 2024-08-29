@@ -11,7 +11,7 @@ require_once '../../model/ArtModel/previewArtModel.php';
 - Create an instance of the class, then retrieve all articles by calling the function
 */
 $artPreviewModel = new ArtPreviewModel();
-$articles = $artPreviewModel->getPreviewArt();
+$articles = $artPreviewModel->getPreviewArt($bdd);
 
 /*
 - Boucle pour chaque article récupéré afin de les afficher dans une structure HTML

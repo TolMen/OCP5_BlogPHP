@@ -17,9 +17,7 @@ class UserRegistModel {
     - This function registers users by connecting to the database, then prepares an SQL insertion query, and finally executes it to insert it into the table
     */
     public function insertRegistUser($bdd, $pseudo, $mdpHash) {
-
         $insertUser = $bdd->prepare('INSERT INTO users(pseudo, mdp, roles) VALUES (?, ?, "Inscrit")');
-
         return $insertUser->execute([$pseudo, $mdpHash]);
     }
 
@@ -28,11 +26,8 @@ class UserRegistModel {
     - This function retrieves user information by connecting to the database, then prepares an SQL selection query, executes it to return the data in the form of an associative table
     */
     public function getRegistUser($bdd, $pseudo, $mdpHash) {
-        
         $recupUser = $bdd->prepare('SELECT * FROM users WHERE pseudo = ? AND mdp = ?');
-        
         $recupUser->execute([$pseudo, $mdpHash]);
-
         return $recupUser->fetch();
     }
 }

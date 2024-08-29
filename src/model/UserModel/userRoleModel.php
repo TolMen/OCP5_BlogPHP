@@ -16,8 +16,7 @@ class UserRoleModel {
     - Fonction pour promouvoir un utilisateur au rôle de "Modérateur"
     - Function to promote a user to the "Moderator" role
     */
-    public function promoteUser($userId) {
-        global $bdd;
+    public function promoteUser($bdd, $userId) {
         $updateRole = $bdd->prepare('UPDATE users SET roles = "Modérateur" WHERE id = ?');
         return $updateRole->execute([$userId]);
     }
@@ -26,8 +25,7 @@ class UserRoleModel {
     - Fonction pour rétrograder un utilisateur au rôle "Inscrit"
     - Function to demote a user to the "Registered" role
     */
-    public function demoteUser($userId) {
-        global $bdd;
+    public function demoteUser($bdd, $userId) {
         $updateRole = $bdd->prepare('UPDATE users SET roles = "Inscrit" WHERE id = ?');
         return $updateRole->execute([$userId]);
     }
