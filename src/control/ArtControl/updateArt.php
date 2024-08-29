@@ -51,7 +51,7 @@ if (isset($_POST['updateArticle'])) {
         - Redirect to the dashboard
         */
         header('Location: ../../views/Admin/dashboard.php');
-        exit();
+        throw new Exception("Redirection vers le tableau de bord");
     } else {
         echo "Erreur lors de l'envoi de l'article";
     }

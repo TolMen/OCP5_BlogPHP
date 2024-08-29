@@ -18,5 +18,5 @@ require_once 'src/control/BDDControl/connectBDD.php';
 */
 if (empty($_SERVER['QUERY_STRING'])) {
     header("Location: src/views/Page/home.php");
-    exit;
+    throw new Exception("Redirection vers la page d'accueil.");
 }
