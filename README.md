@@ -15,7 +15,19 @@ The website is developed from scratch, without using WordPress, to showcase PHP 
 
 ## Installing the project
 
-Soon
+-- Prerequisites
+
+Before you begin, make sure you have the following installed on your machine :
+- PHP
+- XAMPP (For Apache and phpmyadmin)
+- Git (To clone the project)
+
+-- Installation
+Follow the steps below to install and configure the project on your local machine :
+- If you have Git installed, you can clone this repository. Open git bash and run the following command (git clone https://github.com/TolMen/OCProjet5)
+- Move the cloned folder to the htdocs directory of XAMPP
+- Create your database, don't forget to create the tables with their columns, and modify the parameters of the "configBDD" file
+- Launch XAMPP Control Panel and start Apache and MySQL modules, then click admin to access it
 
 ## Author
 
