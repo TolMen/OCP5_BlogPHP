@@ -34,7 +34,6 @@ foreach ($articles as $article) {
 */
 $dateToShow = !empty($article['dateUpdate']) ? $article['dateUpdate'] : $article['datePublication'];
 ?>
-
     <h2 class="title"><?= htmlspecialchars($article['title']); ?></h2>
     <p class="chapo"><?= htmlspecialchars($article['chapo']); ?></p>
     <i class="separator"></i>
