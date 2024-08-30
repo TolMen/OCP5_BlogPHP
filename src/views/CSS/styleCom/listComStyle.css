@@ -1,7 +1,7 @@
-/* CSS de base */
-
+/* Import */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
 
+/* CSS General */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: #eef1ef;
+    background-color: #0e131f;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -46,9 +46,13 @@ header .navbar li {
 
 header .navbar a {
     position: relative;
-    font-size: 0.7em;
+    font-size: 1.2em;
     font-weight: 500;
-    color: #000000;
+    color: #eef1ef;
+}
+
+header .navbar li:nth-child(2) a {
+    font-size: 0.7em;
 }
 
 header .navbar a::before {
@@ -58,7 +62,7 @@ header .navbar a::before {
     left: 0;
     width: 0;
     height: 2px;
-    background: #000000;
+    background: #eef1ef;
     transition: 0.3s;
 }
 
@@ -68,10 +72,9 @@ header .navbar a:hover::before {
 
 /* ---------------------------------------------------------------------- */
 
-/* List Users and Delete Articles */
+/* List Comments */
 
-.listUsers,
-.listArt {
+.secCom {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,65 +82,29 @@ header .navbar a:hover::before {
     padding-top: 25px;
 }
 
-.listUsers div,
-.listArt div {
-    padding-top: 15px;
+.secCom .titleCom {
+    font-size: 1.5em;
+    color: #eef1ef;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.secCom div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.listUsers div a,
-.listArt div a {
+.secCom div p {
+    padding-top: 10px;
+    color: #eef1ef;
+    font-weight: 500;
+}
+
+.secCom div a {
     color: red;
     font-weight: bold;
-}
-
-/* ---------------------------------------------------------------------- */
-
-/* Add Articles */
-
-.addArt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 25px;
-}
-
-.addArt .formAddArt {
-    padding-top: 15px;
-}
-
-.addArt .formAddArt div {
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ---------------------------------------------------------------------- */
-
-/* Comment subject to validation  */
-
-.validCom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 25px;
-}
-
-.validCom a {
-    color: #ff0000;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 25px;
-    letter-spacing: 1;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -158,7 +125,6 @@ header .navbar a:hover::before {
     header .navbar li {
         padding: 0 20px;
     }
-
 }
 
 /* ---------------------------------------------------------------------- */

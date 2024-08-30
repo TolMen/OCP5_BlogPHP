@@ -114,6 +114,7 @@ header .navbar a:hover::before {
 
 .formCom h2 {
     color: #eef1ef;
+    text-shadow: 0px 0px 10px #eef1ef;
     font-size: 1.4em;
     font-weight: 600;
     letter-spacing: 1px;

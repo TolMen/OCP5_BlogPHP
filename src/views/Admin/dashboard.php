@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -83,5 +87,14 @@
             </div>
         </section>
         <!-- End of List Users -->
+
+        <!-- Comment subject to validation -->
+        <section class="validCom">
+            <h2>
+                Commentaire soumis à validation
+            </h2>
+            <a target="_blank" href="../Page/listCom.php">Voir les commentaires en attente</a>
+        </section>
+        <!-- End of Comment subject to validation -->
     </body>
     </html>

@@ -28,7 +28,7 @@ session_start();
             <nav class="navbar">
                 <ul>
                     <li><a href="previewArtUser.php">Articles</a></li>
-                    <li><a href="#">Soon</a></li>
+                    <li><a href="../../control/UserControl/userCheckRole.php">Modération</a></li>
                     <li><a href="../../control/UserControl/userStop.php">Déconnexion</a></li>
                 </ul>
             </nav>
@@ -49,11 +49,11 @@ session_start();
         <section class="formCom">
             <h2>Laissez un commentaire</h2>
             <form action="../../control/ComControl/addCom.php" method="post">
-                <label for="article">Choisissez un article :</label>
+                <label for="article">Choisissez l'article :</label>
                 <select name="article" id="article">
                     <?php require_once '../../control/ComControl/dropListTitle.php' ?> 
                 </select>
-                <label for="commentaire">Votre commentaire :</label>
+                <label for="commentaire">Ecrivez votre commentaire :</label>
                 <textarea name="message" id="message" rows="5"
                 maxlength="1000" autocomplete="off" required></textarea>
                 <button type="submit" name="submitCom">Commentez</button>

@@ -18,6 +18,7 @@ class ComPostModel {
             FROM commentaires
             JOIN users ON commentaires.user_id = users.id
             WHERE commentaires.article_id = :id
+            AND commentaires.validation = 1
         '; 
         $recupPostCom = $bdd->prepare($request);
         $recupPostCom->execute(['id' => $postComId]);
