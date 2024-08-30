@@ -121,6 +121,27 @@ header .navbar a:hover::before {
 
 /* ---------------------------------------------------------------------- */
 
+/* Comment subject to validation  */
+
+.validCom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.validCom a {
+    color: #ff0000;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    letter-spacing: 1;
+}
+
+/* ---------------------------------------------------------------------- */
+
 /* CSS Responsive */
 
 @media screen and (max-width: 600px) {
