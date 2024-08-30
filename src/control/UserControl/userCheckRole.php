@@ -12,4 +12,4 @@ if ($userRole === 'Modérateur') {
 } else {
     header('Location: ../../views/Page/homeConnect.php'); // Redirection pour les autres
 }
-exit();
+throw new Exception(" Fin du script");

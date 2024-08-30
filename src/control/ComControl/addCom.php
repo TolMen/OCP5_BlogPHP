@@ -17,7 +17,7 @@ if (isset($_POST['submitCom'])) {
         $userId = $_SESSION['id'];
     } else {
         echo "Vous devez être connecté pour laisser un commentaire.";
-        exit;
+        throw new Exception("Non connecté");
     }
 
     // Vérification que les champs ne sont pas vides
@@ -30,7 +30,7 @@ if (isset($_POST['submitCom'])) {
         if ($submitCommentModel->insertComment($bdd, $articleId, $commentaire, $userId)) {
             // Redirection après l'ajout du commentaire
             header('Location: ../../views/Page/homeConnect.php');
-            exit; // Assure-toi que le script s'arrête après la redirection
+            throw new Exception(" Redirection à la page d'accueil utilisateurs"); // Assure-toi que le script s'arrête après la redirection
         } else {
             echo "Erreur lors de l'envoi du commentaire";
         }
