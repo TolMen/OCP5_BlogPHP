@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -42,22 +46,19 @@
         <!-- End of Middle of Page -->
 
         <!-- Comment form -->
-
         <section class="formCom">
             <h2>Laissez un commentaire</h2>
-            <form action="" method="post">
+            <form action="../../control/ComControl/addCom.php" method="post">
                 <label for="article">Choisissez un article :</label>
                 <select name="article" id="article">
                     <?php require_once '../../control/ComControl/dropListTitle.php' ?> 
                 </select>
                 <label for="commentaire">Votre commentaire :</label>
-                <textarea name="commentaire" id="commentaire" rows="5"
+                <textarea name="message" id="message" rows="5"
                 maxlength="1000" autocomplete="off" required></textarea>
-                <button type="submitCom">Commentez</button>
+                <button type="submit" name="submitCom">Commentez</button>
             </form>
         </section>
-
-
         <!-- End of Comment form -->
 
         <!-- Footer -->
