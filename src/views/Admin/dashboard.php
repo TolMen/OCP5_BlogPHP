@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -89,7 +93,7 @@
             <h2>
                 Commentaire soumis à validation
             </h2>
-            <a href="../Page/listCom.php">Voir les commentaires en attente</a>
+            <a target="_blank" href="../Page/listCom.php">Voir les commentaires en attente</a>
         </section>
         <!-- End of Comment subject to validation -->
     </body>
