@@ -3,7 +3,7 @@
 require_once '../../control/BDDControl/connectBDD.php'; // Inclure le fichier de connexion à la BDD
 
 class CheckUserRole {
-    function getCheckRole($bdd, $userId) {
+    public function getCheckRole($bdd, $userId) {
         $selectRole = 'SELECT roles FROM users WHERE id = :id';
         $checkRole = $bdd->prepare($selectRole);
         $checkRole->execute(['id' => $userId]);
