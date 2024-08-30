@@ -101,6 +101,65 @@ header .navbar a:hover::before {
 
 /* ---------------------------------------------------------------------- */
 
+/* Comment form */
+
+.formCom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.formCom h2 {
+    color: #eef1ef;
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+.formCom form {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formCom form label {
+    color: #eef1ef;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+.formCom form select {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.formCom form button {
+    border: none;
+    outline: none;
+    padding: 9px 5px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 125px;
+    margin: 25px 0;
+}
+
+.formCom form button:active {
+    opacity: 0.8;
+}
+
+/* ---------------------------------------------------------------------- */
+
 /* Footer = Networks */
 
 footer {

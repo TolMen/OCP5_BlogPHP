@@ -153,6 +153,14 @@ header .navbar a:hover::before {
     text-align: center;
     color: #eef1ef;
     font-family: "Press Start 2P", cursive;
+    padding-bottom: 25px;
+}
+
+.infoArticle .secCom .messageCom {
+    padding: 5px 0;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #eef1ef;
 }
 
 /* ---------------------------------------------------------------------- */
