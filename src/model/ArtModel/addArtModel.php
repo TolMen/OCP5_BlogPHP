@@ -9,8 +9,8 @@ require_once '../../control/BDDControl/connectBDD.php';
 class AddArticleModel {
 
     /*
-    - Cette fonction récupére les information effectue une liaison à la BDD, puis exécute une requête SQL d'insertion
-    - This function retrieves the information, links it to the database, then executes an insert SQL query
+    - Cette fonction insére les informations des articles
+    - This function inserts the article information
     */
     public function insertArticle(PDO $bdd, $numero, $title, $chapo, $content, $datePublication) {
         $insertArt = 'INSERT INTO articles (numero, title, chapo, content, datePublication) VALUES (?, ?, ?, ?, ?)';

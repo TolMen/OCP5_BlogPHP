@@ -9,8 +9,8 @@ require_once '../../control/BDDControl/connectBDD.php';
 class UserBanModel {
     
     /*
-    - Cette fonction récupère les informations utilisateurs en effectuant une liaison à la BDD, puis prépare une requête SQL de sélection, l'exécute afin de retourner les données sous forme de tableau associatif
-    - This function retrieves user information by connecting to the database, then prepares an SQL selection query, executes it to return the data in the form of an associative table
+    - Cette fonction récupère les informations utilisateurs par son ID
+    - This function retrieves user information by ID
     */
     public function getBanUser(PDO $bdd, $userId) {
         $recupBanUser = $bdd->prepare('SELECT * FROM users WHERE id = ?');
@@ -19,8 +19,8 @@ class UserBanModel {
     }
 
     /*
-    - Cette fonction récupère les informations utilisateurs en effectuant une liaison à la BDD, puis prépare une requête SQL de suppression, et l'exécute
-    - This function retrieves user information by linking to the database, then prepares a delete SQL query, and executes it
+    - Cette fonction supprime les informations utilisateurs
+    - This function deletes user information
     */
     public function deleteBanUser(PDO $bdd, $userId) {
         $deleteBanUser = $bdd->prepare('DELETE FROM users WHERE id = ?');

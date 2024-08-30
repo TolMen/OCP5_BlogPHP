@@ -1,5 +1,9 @@
 <?php
 
+/* 
+- Inclusion des fichiers nécessaire
+- Inclusion of necessary files
+*/
 require_once '../../control/BDDControl/connectBDD.php';
 
 class DropListTitleModel {

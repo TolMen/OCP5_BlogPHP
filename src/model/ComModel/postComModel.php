@@ -9,8 +9,8 @@ require_once '../../control/BDDControl/connectBDD.php';
 class ComPostModel {
 
     /*
-    - Cette fonction récupère tous les articles en effectuant une liaison à la BDD, puis exécute une requête SQL de sélection, afin de retourner les articles
-    - This function retrieves all the articles by linking to the database, then executes a SQL selection query, in order to return the articles
+    - Fonction pour récupérer toute les informations du commentaires avec le pseudo utilisateurs, et seulement les commentaires validé
+    - Function to retrieve all comment information with user nickname, and only validated comments
     */
     public function getPostCom(PDO $bdd, $postComId) {
         $request = '

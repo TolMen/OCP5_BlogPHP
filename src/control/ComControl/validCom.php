@@ -27,8 +27,8 @@ if (isset($_GET['id']) && isset($_GET['action'])) {
     }
 
     /*
-    - Redirection vers le tableau de bord
-    - Redirect to the dashboard
+    - Redirection vers la liste des commentaires
+    - Redirect to comments list
     */
     header('Location: ../../views/Page/listCom.php');
     throw new Exception("Redirection vers le tableau de bord");

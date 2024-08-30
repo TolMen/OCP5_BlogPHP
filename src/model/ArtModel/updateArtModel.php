@@ -9,8 +9,8 @@ require_once '../../control/BDDControl/connectBDD.php';
 class UpdateArticleModel {
 
     /*
-    - Cette fonction récupére les information effectue une liaison à la BDD, puis exécute une requête SQL selection
-    - This function retrieves the information, links it to the database, then executes an select SQL query
+    - Cette fonction récupére les informations des articles
+    - This function retrieves information from articles
     */
     public function getArticleId(PDO $bdd, $articleId) {
         $recupArt = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
@@ -19,8 +19,8 @@ class UpdateArticleModel {
     }
 
     /*
-    - Cette fonction récupére les information effectue une liaison à la BDD, puis exécute une requête SQL de mise à jour
-    - This function retrieves the information, links it to the database, then executes an update SQL query
+    - Fonction pour mettre à jour les informations de l'article
+    - Function to update item information
     */
     public function updateArticle(PDO $bdd, $articleId, $title, $chapo, $content, $dateUpdate) {
         $updateArt = 'UPDATE articles SET title = ?, chapo = ?, content = ?, dateUpdate = ? WHERE id = ?';
