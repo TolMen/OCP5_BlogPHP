@@ -45,7 +45,8 @@
             <?php include '../../control/ArtControl/postArt.php'; ?>
             <i class="separator"></i>
             <div class="secCom">
-                <p class="titleCom">Commentaires</p>
+                <h2 class="titleCom">Commentaires</h2>
+                <?php include '../../control/ComControl/postCom.php'; ?>
             </div>
             <i class="separator"></i>
         </section>
