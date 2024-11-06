@@ -1,5 +1,7 @@
 # PHP Blog Project
 
+> **Ce projet a été réalisé dans le cadre de mon apprentissage pour le parcours d'OpenClassrooms (Développeur d'application PHP/Symfony).**
+
 This project is a blog developed in PHP, which allows a developer to present his talents and skills through a personalized blog.
 The website is developed from scratch, without using WordPress, to showcase PHP web development skills.
 
