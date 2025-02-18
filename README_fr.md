@@ -51,15 +51,6 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur 
    Lancez le panneau de contrôle de XAMPP et démarrez les modules **Apache** et **MySQL**. <br>
    Ensuite, cliquez sur **Admin** pour accéder à phpMyAdmin.
 
-## 💡 Améliorations possibles
-
-Ce projet sert de base pour une plateforme de blog PHP, mais il y a de nombreuses possibilités d'amélioration :
-
-- ✅ Ajout de la pagination pour la liste des articles.
-- ✅ Mise en place d'un système d'upload d'images pour les articles.
-- ✅ Ajout d'un système de modération des commentaires.
-- ✅ Renforcement de la sécurité avec la gestion des rôles utilisateurs.
-
 ---
 
 Merci d'explorer ce projet.  
