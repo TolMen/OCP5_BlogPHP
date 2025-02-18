@@ -55,7 +55,8 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur 
 
 Merci d'explorer ce projet.  
 N'hésitez pas à l'explorer, le modifier et l'améliorer ! ✨  
-Pour toute question ou collaboration, n'hésitez pas à me contacter ! 📩
+
+**Pour toute question ou collaboration, n'hésitez pas à me contacter ! 📩**
 
 [TolMen](https://github.com/TolMen) - [LinkedIn](https://www.linkedin.com/in/jessyfrachisse/)
 
